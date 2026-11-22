@@ -521,7 +521,34 @@ a:hover { color: var(--or-vif); }
   box-shadow: 0 1.25rem 2.75rem rgba(0, 0, 0, 0.45);
 }
 .bon-carte img { width: 100%; height: auto; }
-.bon-ligne, .bon-tel { position: absolute; margin: 0; white-space: nowrap; line-height: 1; }
+.bon-ligne { position: absolute; margin: 0; white-space: nowrap; line-height: 1; }
+.bon-contacts {
+  position: absolute;
+  left: 50.6%;
+  top: 87.4%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  column-gap: 1.3cqw;
+  row-gap: 0.45cqw;
+  white-space: nowrap;
+  line-height: 1;
+  color: #3b2412;
+}
+.bon-icone {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 3.9cqw;
+  height: 3.9cqw;
+  margin-right: 0.4cqw;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d6a94a, #a47422);
+}
+.bon-icone svg { width: 55%; height: 55%; fill: #fff8ec; }
+.bon-nom { font-family: "Marcellus", Georgia, serif; font-size: 1.5cqw; letter-spacing: 0.22em; text-transform: uppercase; }
+.bon-num { font-family: "Marcellus", Georgia, serif; font-size: 2.55cqw; letter-spacing: 0.06em; }
 .bon-ligne { left: 21%; right: 20.4%; text-align: center; }
 .bon-format {
   top: 51%;
@@ -538,15 +565,6 @@ a:hover { color: var(--or-vif); }
   font-size: 1.6rem;
   font-size: calc(5.6cqw * var(--ajuste, 1));
   color: #ad7e2b;
-}
-.bon-tel {
-  left: 39.6%;
-  top: 91.5%;
-  font-family: "Marcellus", Georgia, serif;
-  font-size: 1rem;
-  font-size: 3.2cqw;
-  letter-spacing: 0.06em;
-  color: #3b2412;
 }
 .bon-choix { display: grid; gap: 0.9rem; width: 100%; max-width: 36rem; }
 .bon-choix[hidden], .bon-choix-style[hidden] { display: none; }

@@ -48,7 +48,7 @@ SOINS = [
          histoire="“Skin &amp; Soul”, from the skin to the soul: Sandy’s signature massage, a treatment that is both physical and energetic, for the body, the soul and the mind. She puts her knowledge of the body and her attentiveness at the service of your well-being.",
          bienfaits=["The most complete treatment on the menu", "Body and mind, together", "All of Sandy’s expertise"]),
     dict(cle="transgenerationnel", nom="Transgenerational release session", lignes=[(None, "€50")],
-         histoire="Transgenerational work starts from one idea: we also inherit the history of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and feminine lines: that is the meaning of this release and realignment session.",
+         histoire="Transgenerational work starts from one idea: we also inherit the history of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and paternal lines, for women and men alike: that is the meaning of this release and realignment session.",
          bienfaits=["Step back from your family history", "Let go of what does not belong to you", "A caring time to listen and to talk"],
          note="This session does not replace medical or psychological care."),
 ]
@@ -81,7 +81,7 @@ def soin_html(soin):
 
 
 FAQ = [
-    ("How do I book?", 'By phone, 7 days a week: Sandy on <a href="tel:+33677797272">+33 6 77 79 72 72</a> or Sandra on <a href="tel:+33646584847">+33 6 46 58 48 47</a>.'),
+    ("How do I book?", 'By phone, 7 days a week: Sandy on <a href="tel:+33677797272">+33 6 77 79 72 72</a> or Sandra on <a href="tel:+33646586847">+33 6 46 58 68 47</a>.'),
     ("Where is the treatment room?", 'Inside the Sunrise Beach Hôtel, 1 avenue des Courlis, Gruissan, facing Plage des Chalets. <a href="%s" target="_blank" rel="noopener">Get directions</a>.' % CID),
     ("What happens during a session?", "Each massage is adapted to your needs, your pain and how you feel. You talk it through with Sandy or Sandra before you begin."),
     ("What if I need to cancel?", "Please let us know at least 24&nbsp;hours in advance, by phone."),
@@ -126,7 +126,7 @@ PAIRES = [
      "Come back to yourself through the body, touch and presence, with expert hands that listen where words are no longer enough."),
     ('aria-label="Appeler pour prendre rendez-vous"', 'aria-label="Call to book"'),
     ('<span class="numero">06 77 79 72 72</span>', '<span class="numero">+33 6 77 79 72 72</span>'),
-    ('<span class="numero">06 46 58 48 47</span>', '<span class="numero">+33 6 46 58 48 47</span>'),
+    ('<span class="numero">06 46 58 68 47</span>', '<span class="numero">+33 6 46 58 68 47</span>'),
     ("7 jours sur 7, au Sunrise Beach Hôtel, plage des Chalets", "7 days a week, at the Sunrise Beach Hôtel, Plage des Chalets"),
     ("5/5 sur Google, 26&nbsp;avis", "5/5 on Google, 26&nbsp;reviews"),
     (" (ouvre Google Maps)", " (opens Google Maps)"),
