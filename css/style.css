@@ -79,7 +79,7 @@ a:hover { color: var(--or-vif); }
 .marque img { width: auto; height: 3.4rem; }
 
 .menu ul { display: none; margin: 0; padding: 0; list-style: none; }
-.menu a { color: var(--sable); text-decoration: none; }
+.menu a { color: var(--sable); text-decoration: none; white-space: nowrap; }
 .menu a:hover { color: var(--or-vif); }
 
 .bouton {
@@ -97,7 +97,19 @@ a:hover { color: var(--or-vif); }
 .bouton:hover { background: rgba(225, 186, 125, 0.14); color: var(--sable); }
 .bouton-plein { background: var(--or-patine); color: var(--ecorce); }
 .bouton-plein:hover { background: var(--or-vif); color: var(--ecorce); }
-.site-entete .bouton { display: none; }
+.site-entete .bouton { display: none; white-space: nowrap; }
+.entete-actions { display: flex; align-items: center; gap: 0.75rem; }
+.langue {
+  flex: none;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--filet);
+  border-radius: 999px;
+  color: var(--sable);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.langue:hover { border-color: var(--or-patine); color: var(--or-vif); }
 
 /* ---------- Accueil : Sandy et Sandra sur fond ivoire, le logo doré au milieu ---------- */
 
@@ -488,6 +500,92 @@ a:hover { color: var(--or-vif); }
 .parcours-quand { display: block; font-family: "Marcellus", Georgia, serif; font-size: 1.1rem; color: var(--or-patine); }
 .parcours p { margin: 0.15rem 0 0; }
 
+/* Bons cadeaux */
+.bon-visuel { display: grid; place-items: center; padding: 1rem 0; }
+.bon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 22rem);
+  aspect-ratio: 1.6;
+  padding: 1.25rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 1rem;
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 20%, rgba(241, 208, 81, 0.16), rgba(241, 208, 81, 0) 70%),
+    linear-gradient(135deg, #3a2716, #1f1309);
+  text-align: center;
+  transform: rotate(-3deg);
+}
+.bon::before {
+  content: "";
+  position: absolute;
+  inset: 0.45rem;
+  border: 1px dashed rgba(225, 186, 125, 0.45);
+  border-radius: 0.7rem;
+}
+.bon img { width: 6.5rem; }
+.bon-titre { margin: 0.1rem 0 0; font-family: "Great Vibes", "Snell Roundhand", cursive; font-size: 2.4rem; line-height: 1.1; color: var(--or-patine); }
+.bon-texte { margin: 0; font-size: 1rem; color: var(--sable-doux); }
+.bon-validite { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--or-patine); }
+.etapes { counter-reset: etape; margin: 1.5rem 0 1rem; padding: 0; list-style: none; }
+.etapes li { counter-increment: etape; position: relative; min-height: 2rem; padding: 0.3rem 0 0.6rem 2.75rem; }
+.etapes li::before {
+  content: counter(etape);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  display: grid;
+  place-items: center;
+  width: 1.95rem;
+  height: 1.95rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 50%;
+  font-family: "Marcellus", Georgia, serif;
+  color: var(--or-patine);
+}
+
+/* Avis clients */
+.avis { text-align: center; }
+.avis .chapo { margin: 0 auto 1.75rem; }
+.note-google { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; margin: 0 0 1.5rem; }
+.note-chiffre { font-family: "Marcellus", Georgia, serif; font-size: 3.5rem; line-height: 1; color: var(--or-patine); }
+.note-google .etoiles { font-size: 1.4rem; letter-spacing: 0.12em; color: var(--or-vif); }
+.note-nombre { color: var(--sable-doux); }
+.actions-centre { justify-content: center; }
+
+/* Questions fréquentes */
+.conteneur-etroit { max-width: 46rem; }
+.questions h2 { text-align: center; }
+.faq { margin-top: 1.5rem; border-top: 1px solid var(--filet); }
+.faq details { border-bottom: 1px solid var(--filet); }
+.faq summary {
+  position: relative;
+  padding: 1.1rem 2.75rem 1.1rem 0;
+  font-family: "Marcellus", Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--or-patine);
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "";
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 1px solid var(--or-patine);
+  border-bottom: 1px solid var(--or-patine);
+  transform: translateY(-70%) rotate(45deg);
+}
+.faq details[open] summary::after { transform: translateY(-25%) rotate(-135deg); }
+.faq summary:hover { color: var(--or-vif); }
+.faq details p { margin: 0 0 1.25rem; }
+
 /* Lieu */
 .citation-haut { margin-top: 0; }
 .texte-lieu { margin-top: 1.5rem; }
@@ -553,7 +651,6 @@ body.avec-barre { padding-bottom: 4.75rem; }
 }
 
 @media (min-width: 860px) {
-  .menu ul { display: flex; gap: 1.75rem; }
   .site-entete .bouton { display: inline-flex; }
   .marque img { height: 3.8rem; }
   .paire { grid-template-columns: 5fr 6fr; gap: 4rem; }
@@ -571,6 +668,10 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (min-width: 1000px) {
   .paire .publics { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1120px) {
+  .menu ul { display: flex; gap: 1.4rem; }
 }
 
 /* Sur téléphone, la barre d'appel remplace les boutons de l'accueil */
@@ -604,6 +705,7 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (prefers-reduced-motion: no-preference) {
   a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
+  .faq summary::after { transition: transform 0.2s ease; }
 
 }
 
