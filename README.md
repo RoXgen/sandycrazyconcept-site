@@ -11,9 +11,9 @@ Le QR code imprimé sur le matériel de Sandy ouvre `https://sandycrazyconcept.f
 - `fonts/` : polices Marcellus et Alegreya Sans (licence SIL Open Font License), hébergées ici : aucun appel externe, aucun cookie.
 
 ## Publication
-GitHub Pages, branche `main`, dossier racine. Aperçu : https://roxgen.github.io/sandycrazyconcept-site/
+GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fichier `CNAME`). Adresse GitHub d'origine : https://roxgen.github.io/sandycrazyconcept-site/ (redirige vers le domaine).
 
-## Passage sur sandycrazyconcept.fr (après validation de Roméo et après le transfert du domaine au nom de Sandy)
+## Passage sur sandycrazyconcept.fr (fait le 22/11/2026, à la demande de Roméo, avant la fin du transfert du domaine)
 1. Retirer la ligne `<meta name="robots" content="noindex">` de `index.html` et de `mentions-legales.html`.
 2. GitHub : Settings › Pages › Custom domain = `sandycrazyconcept.fr`, puis « Enforce HTTPS ».
 3. DNS chez one.com : supprimer les A `167.172.5.31` (@ et www) et les 2 TXT `fwd` (redirection forwarddomain.net) ;
