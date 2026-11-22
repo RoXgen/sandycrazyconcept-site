@@ -1,6 +1,7 @@
 /* Sérénita Gruissan — aperçu du bon cadeau.
    Le soin choisi (et, pour le duo, le style du massage) s'inscrit sur la carte du bon,
-   comme sur le bon remis au client. Sans JavaScript, la carte montre le duo « Massage du monde ».
+   comme sur le bon remis au client ; l'occasion (Noël, anniversaire…) change l'image de la carte.
+   Sans JavaScript, la carte montre le duo « Massage du monde », toutes occasions.
    Aucun cookie, aucun appel externe. */
 (function () {
   "use strict";
@@ -11,6 +12,12 @@
 
   var soin = document.getElementById("bon-soin");
   var style = document.getElementById("bon-style");
+  var occasion = document.getElementById("bon-occasion");
+  var image = carte.querySelector("img");
+  var source = carte.querySelector("source");
+  var dossier = image.getAttribute("src").replace(/[^\/]*$/, "");
+  // Une image par occasion : img/bon-cadeau-<occasion>-768|1536.webp|jpg (sans occasion : img/bon-cadeau-…)
+  var OCCASIONS = ["noel", "anniversaire", "saint-valentin", "fete-des-meres", "fete-des-peres"];
   var blocStyle = choix.querySelector(".bon-choix-style");
   var format = carte.querySelector(".bon-format");
   var nom = carte.querySelector(".bon-style");
@@ -56,9 +63,18 @@
     ajuster(nom);
   }
 
+  function poserImage() {
+    var cle = occasion ? occasion.value : "";
+    var base = dossier + (OCCASIONS.indexOf(cle) >= 0 ? "bon-cadeau-" + cle : "bon-cadeau");
+    if (source) { source.srcset = base + "-768.webp 768w, " + base + "-1536.webp 1536w"; }
+    image.srcset = base + "-768.jpg 768w, " + base + "-1536.jpg 1536w";
+    image.src = base + "-768.jpg";
+  }
+
   function annoncer() {
     var texte = soin.options[soin.selectedIndex].text;
     if (soin.value === "duo") { texte += ", " + style.options[style.selectedIndex].text; }
+    if (occasion && OCCASIONS.indexOf(occasion.value) >= 0) { texte += ", " + occasion.options[occasion.selectedIndex].text; }
     resume.textContent = (anglais ? "Voucher preview: " : "Aperçu du bon : ") + texte + ".";
   }
 
@@ -70,6 +86,10 @@
   choix.hidden = false;
   soin.addEventListener("change", changer);
   style.addEventListener("change", changer);
+  if (occasion) {
+    occasion.addEventListener("change", function () { poserImage(); annoncer(); });
+    if (occasion.value !== "classique") { poserImage(); }
+  }
   dessiner();
   if (document.fonts && document.fonts.ready) { document.fonts.ready.then(dessiner); }
   if ("ResizeObserver" in window) {

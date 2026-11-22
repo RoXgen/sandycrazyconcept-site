@@ -228,6 +228,9 @@ a:hover { color: var(--or-vif); }
 .citation blockquote { margin: 0; }
 .citation p { margin: 0; font-style: italic; font-size: clamp(1.25rem, 0.6vw + 1.1rem, 1.5rem); line-height: 1.55; color: var(--sable); }
 .citation figcaption { margin-top: 0.75rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); }
+.citation-centre { max-width: 46rem; margin: 3.5rem auto 0; text-align: center; }
+.citation-centre::before { content: "✦"; display: block; margin-bottom: 1.1rem; color: var(--or-vif); font-size: 1rem; line-height: 1; }
+.citation-centre p { font-size: clamp(1.4rem, 1.1vw + 1.1rem, 1.95rem); line-height: 1.5; text-wrap: balance; }
 
 .paire { display: grid; gap: 2.5rem; align-items: center; }
 .paire .photo img { width: 100%; border-radius: 6px; }
@@ -401,6 +404,10 @@ a:hover { color: var(--or-vif); }
 .fiche-prix { margin: 0.75rem 0 0.25rem; }
 .fiche-contenu h4 { margin: 1.25rem 0 0.35rem; font-family: "Marcellus", Georgia, serif; font-weight: 400; font-size: 1.15rem; color: var(--or-patine); }
 .fiche-contenu p { margin: 0; }
+.fiche-contenu p + p, .fiche-liste + p { margin-top: 0.6rem; }
+.fiche-liste { margin: 0.45rem 0 0; padding: 0 0 0 1.25rem; }
+.fiche-liste li { padding: 0.12rem 0; }
+.fiche-liste li::marker { color: var(--or-vif); }
 .fiche-bienfaits { margin: 0; padding: 0; list-style: none; }
 .fiche-bienfaits li { position: relative; padding: 0.3rem 0 0.3rem 1.5rem; }
 .fiche-bienfaits li::before { content: "✦"; position: absolute; left: 0; top: 0.3rem; color: var(--or-vif); font-size: 0.85rem; }
@@ -509,7 +516,7 @@ a:hover { color: var(--or-vif); }
 .offrir-haut .chapo { margin-bottom: 0; }
 .offrir-bas .etapes { margin-top: 0.5rem; }
 
-/* Bons cadeaux : carte de Sérénita (fond de la carte fournie, textes variables posés par la page) */
+/* Bons cadeaux : carte de Sérénita (une image par occasion, d'après la carte fournie ; soin posé par la page) */
 .bon-visuel { display: grid; gap: 1.5rem; justify-items: center; padding: 0.5rem 0; }
 .bon-carte {
   position: relative;
@@ -522,33 +529,6 @@ a:hover { color: var(--or-vif); }
 }
 .bon-carte img { width: 100%; height: auto; }
 .bon-ligne { position: absolute; margin: 0; white-space: nowrap; line-height: 1; }
-.bon-contacts {
-  position: absolute;
-  left: 50.6%;
-  top: 87.4%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-  column-gap: 1.3cqw;
-  row-gap: 0.45cqw;
-  white-space: nowrap;
-  line-height: 1;
-  color: #3b2412;
-}
-.bon-icone {
-  grid-row: 1 / span 2;
-  display: grid;
-  place-items: center;
-  width: 3.9cqw;
-  height: 3.9cqw;
-  margin-right: 0.4cqw;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #d6a94a, #a47422);
-}
-.bon-icone svg { width: 55%; height: 55%; fill: #fff8ec; }
-.bon-nom { font-family: "Marcellus", Georgia, serif; font-size: 1.5cqw; letter-spacing: 0.22em; text-transform: uppercase; }
-.bon-num { font-family: "Marcellus", Georgia, serif; font-size: 2.55cqw; letter-spacing: 0.06em; }
 .bon-ligne { left: 21%; right: 20.4%; text-align: center; }
 .bon-format {
   top: 51%;

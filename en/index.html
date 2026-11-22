@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preload" href="../fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/style.css?v=11">
+  <link rel="stylesheet" href="../css/style.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -119,20 +119,20 @@
         <div>
           <h2 id="titre-approche">Our approach</h2>
           <p class="chapo">Every gesture is an answer. Your body is speaking; it is time to listen.</p>
-          <figure class="citation">
-            <blockquote><p>“We care for the whole person: physical body, emotional body and energy body.”</p></blockquote>
-          </figure>
         </div>
       </div>
+      <figure class="citation citation-centre">
+        <blockquote><p>“We care for the whole person: physical body, emotional body and energy body.”</p></blockquote>
+      </figure>
     </section>
 
     <section class="section section-alt" id="pour-tous" aria-labelledby="titre-pour-tous">
       <div class="conteneur paire inversee">
         <div class="photo">
           <picture>
-            <source type="image/webp" srcset="../img/soin-nuque-600.webp 600w, ../img/soin-nuque-813.webp 813w" sizes="(min-width: 860px) 28rem, 100vw">
-            <img src="../img/soin-nuque-600.jpg" srcset="../img/soin-nuque-600.jpg 600w, ../img/soin-nuque-813.jpg 813w" sizes="(min-width: 860px) 28rem, 100vw"
-                 width="600" height="836" loading="lazy" alt="A Sérénita companion massages the neck of a client lying down, eyes covered">
+            <source type="image/webp" srcset="../img/massage-enfant-600.webp 600w, ../img/massage-enfant-1179.webp 1179w" sizes="(min-width: 860px) 28rem, 100vw">
+            <img src="../img/massage-enfant-600.jpg" srcset="../img/massage-enfant-600.jpg 600w, ../img/massage-enfant-1179.jpg 1179w" sizes="(min-width: 860px) 28rem, 100vw"
+                 width="600" height="418" loading="lazy" alt="A Sérénita companion massages the back of a child lying down">
           </picture>
         </div>
         <div>
@@ -205,8 +205,15 @@
             <h3><button class="soin-bouton" type="button" data-fiche="reflexologie" aria-haspopup="dialog"><span class="soin-nom">Sérénita foot and hand reflexology</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">€30</span></p>
             <div class="fiche" id="fiche-reflexologie">
-              <h4>Its story</h4>
-              <p>Massaging the feet and hands is a very old practice. Modern reflexology was born in 1913 in the United States, when the physician William Fitzgerald described “zones” of the body linked to the feet and hands. In the 1930s, Eunice Ingham drew the maps of the feet still used today. The treatment uses gentle pressure on the feet and hands.</p>
+              <h4>How it works</h4>
+              <p>Each foot has around 7,000 nerve endings. Touch, pressure, movement and stimulation of the soles can, in particular, influence:</p>
+              <ul class="fiche-liste">
+                <li>the sense of bodily safety;</li>
+                <li>relaxation and reduced muscle tension;</li>
+                <li>postural adjustments and balance;</li>
+                <li>the regulation of alertness and relaxation.</li>
+              </ul>
+              <p>So the foot is not simply something to stand on: it is a true interface. The treatment uses gentle pressure on the feet and hands.</p>
               <h4>Its benefits</h4>
               <ul class="fiche-bienfaits">
                 <li>Deep relaxation, from head to toe</li>
@@ -325,10 +332,10 @@
             <p class="ligne ligne-seule"><span class="prix">€50</span></p>
             <div class="fiche" id="fiche-transgenerationnel">
               <h4>Its story</h4>
-              <p>Transgenerational work starts from one idea: we also inherit the history of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and paternal lines, for women and men alike: that is the meaning of this release and realignment session.</p>
+              <p>We inherit the history and the wounds of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and paternal lines, for women and men alike: that is the meaning of this release and realignment session.</p>
               <h4>Its benefits</h4>
               <ul class="fiche-bienfaits">
-                <li>Step back from your family history</li>
+                <li>Rise above and embrace your family history with humility</li>
                 <li>Let go of what does not belong to you</li>
                 <li>A caring time to listen and to talk</li>
               </ul>
@@ -375,11 +382,6 @@
             </picture>
             <p class="bon-ligne bon-format">Massage en duo d’une heure</p>
             <p class="bon-ligne bon-style">“Massage du monde”</p>
-            <div class="bon-contacts">
-              <span class="bon-icone"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 5 5a2 2 0 0 1 2-2z"/></svg></span>
-              <span class="bon-nom">Sandra</span><span class="bon-num">06&nbsp;46&nbsp;58&nbsp;68&nbsp;47</span>
-              <span class="bon-nom">Sandy</span><span class="bon-num">06&nbsp;77&nbsp;79&nbsp;72&nbsp;72</span>
-            </div>
           </div>
           <div class="bon-choix" hidden>
             <div>
@@ -405,6 +407,17 @@
               <select id="bon-style">
                 <option value="monde" selected>Massages of the world</option>
                 <option value="huiles">Warm organic essential oils</option>
+              </select>
+            </div>
+            <div>
+              <label for="bon-occasion">Occasion</label>
+              <select id="bon-occasion">
+                <option value="classique" selected>Any occasion</option>
+                <option value="noel">Christmas</option>
+                <option value="anniversaire">Birthday</option>
+                <option value="saint-valentin">Valentine’s Day</option>
+                <option value="fete-des-meres">Mother’s Day</option>
+                <option value="fete-des-peres">Father’s Day</option>
               </select>
             </div>
             <p class="bon-resume visuellement-cache" aria-live="polite">Voucher preview: Sérénita Duo — 60 min, Massages of the world.</p>
@@ -576,6 +589,6 @@
     <a href="tel:+33646586847">Call Sandra</a>
   </nav>
   <script src="../js/soins.js?v=2" defer></script>
-  <script src="../js/bon.js?v=1" defer></script>
+  <script src="../js/bon.js?v=2" defer></script>
 </body>
 </html>

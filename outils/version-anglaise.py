@@ -22,7 +22,17 @@ SOINS = [
          histoire="Rosehip grows wild in the Andes. In Chile, its seeds are pressed to make a precious oil, known for caring for the skin. The treatment pairs it with slow movements across the whole face.",
          bienfaits=["Relaxes the features and the jaw", "Nourished, supple skin", "Twenty minutes of complete calm"]),
     dict(cle="reflexologie", nom="Sérénita foot and hand reflexology", lignes=[("20&nbsp;min", "€30")],
-         histoire="Massaging the feet and hands is a very old practice. Modern reflexology was born in 1913 in the United States, when the physician William Fitzgerald described “zones” of the body linked to the feet and hands. In the 1930s, Eunice Ingham drew the maps of the feet still used today. The treatment uses gentle pressure on the feet and hands.",
+         titre="How it works",
+         histoire_html=[
+             "<p>Each foot has around 7,000 nerve endings. Touch, pressure, movement and stimulation of the soles can, in particular, influence:</p>",
+             '<ul class="fiche-liste">',
+             "  <li>the sense of bodily safety;</li>",
+             "  <li>relaxation and reduced muscle tension;</li>",
+             "  <li>postural adjustments and balance;</li>",
+             "  <li>the regulation of alertness and relaxation.</li>",
+             "</ul>",
+             "<p>So the foot is not simply something to stand on: it is a true interface. The treatment uses gentle pressure on the feet and hands.</p>",
+         ],
          bienfaits=["Deep relaxation, from head to toe", "Lighter feet and hands", "Twenty minutes to refocus"]),
     dict(cle="dos", nom="Back and neck massage", lignes=[("40&nbsp;min", "€50")],
          histoire="Our backs carry the weight of our days: screens, lifting, stress. This treatment focuses where tension builds up most, from the lower back to the neck.",
@@ -48,8 +58,8 @@ SOINS = [
          histoire="“Skin &amp; Soul”, from the skin to the soul: Sandy’s signature massage, a treatment that is both physical and energetic, for the body, the soul and the mind. She puts her knowledge of the body and her attentiveness at the service of your well-being.",
          bienfaits=["The most complete treatment on the menu", "Body and mind, together", "All of Sandy’s expertise"]),
     dict(cle="transgenerationnel", nom="Transgenerational release session", lignes=[(None, "€50")],
-         histoire="Transgenerational work starts from one idea: we also inherit the history of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and paternal lines, for women and men alike: that is the meaning of this release and realignment session.",
-         bienfaits=["Step back from your family history", "Let go of what does not belong to you", "A caring time to listen and to talk"],
+         histoire="We inherit the history and the wounds of our ancestors. This session is the fruit of Sandy’s experience and her own research, after the things left unsaid about her father. It helps free and realign the maternal and paternal lines, for women and men alike: that is the meaning of this release and realignment session.",
+         bienfaits=["Rise above and embrace your family history with humility", "Let go of what does not belong to you", "A caring time to listen and to talk"],
          note="This session does not replace medical or psychological care."),
 ]
 
@@ -67,8 +77,11 @@ def soin_html(soin):
         else:
             out.append('            <p class="ligne ligne-seule"><span class="prix">%s</span></p>' % prix)
     out.append('            <div class="fiche" id="fiche-%s">' % soin["cle"])
-    out.append('              <h4>Its story</h4>')
-    out.append('              <p>%s</p>' % soin["histoire"])
+    out.append('              <h4>%s</h4>' % soin.get("titre", "Its story"))
+    if soin.get("histoire_html"):
+        out.extend('              ' + ligne for ligne in soin["histoire_html"])
+    else:
+        out.append('              <p>%s</p>' % soin["histoire"])
     out.append('              <h4>Its benefits</h4>')
     out.append('              <ul class="fiche-bienfaits">')
     out.extend('                <li>%s</li>' % b for b in soin["bienfaits"])
@@ -135,7 +148,7 @@ PAIRES = [
     ("Chaque geste est une réponse. Votre corps parle, il est temps de l’écouter.", "Every gesture is an answer. Your body is speaking; it is time to listen."),
     ("«&#8239;Nous prenons soin de l’être dans sa globalité&#8239;: corps physique, corps émotionnel et corps énergétique.&#8239;»",
      "“We care for the whole person: physical body, emotional body and energy body.”"),
-    ('alt="Une accompagnante Sérénita masse la nuque d’un client allongé, les yeux couverts"', 'alt="A Sérénita companion massages the neck of a client lying down, eyes covered"'),
+    ('alt="Une accompagnante Sérénita masse le dos d’un enfant allongé"', 'alt="A Sérénita companion massages the back of a child lying down"'),
     (">Des soins pour tous</h2>", ">Treatments for everyone</h2>"),
     ("Le bien-être n’a pas d’âge, ni de différence. Des massages et des soins pour tous, à chaque étape de la vie.",
      "Well-being has no age and makes no distinction. Massages and treatments for everyone, at every stage of life."),
@@ -172,6 +185,12 @@ PAIRES = [
     ("<label for=\"bon-style\">Style du massage en duo</label>", "<label for=\"bon-style\">Duo massage style</label>"),
     ('<option value="monde" selected>Massage du monde</option>', '<option value="monde" selected>Massages of the world</option>'),
     ('<option value="huiles">Huiles essentielles chaudes bio</option>', '<option value="huiles">Warm organic essential oils</option>'),
+    ('<option value="classique" selected>Toutes occasions</option>', '<option value="classique" selected>Any occasion</option>'),
+    ('<option value="noel">Noël</option>', '<option value="noel">Christmas</option>'),
+    ('<option value="anniversaire">Anniversaire</option>', '<option value="anniversaire">Birthday</option>'),
+    ('<option value="saint-valentin">Saint-Valentin</option>', '<option value="saint-valentin">Valentine’s Day</option>'),
+    ('<option value="fete-des-meres">Fête des Mères</option>', '<option value="fete-des-meres">Mother’s Day</option>'),
+    ('<option value="fete-des-peres">Fête des Pères</option>', '<option value="fete-des-peres">Father’s Day</option>'),
     ("Aperçu du bon&nbsp;: Duo Sérénita — 60 min, Massage du monde.", "Voucher preview: Sérénita Duo — 60 min, Massages of the world."),
     (">Offrir un massage</h2>", ">Give a massage</h2>"),
     ("Un anniversaire, une future maman, un merci&nbsp;: offrez le soin de votre choix avec un bon cadeau Sérénita.",
