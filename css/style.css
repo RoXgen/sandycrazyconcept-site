@@ -1,11 +1,12 @@
 /* Sérénita Gruissan — version 2 (« pro »)
    Couleurs de la page Canva d'origine : brun #2e1e10, dorés #e1ba7d / #f1d051.
-   Polices hébergées sur le site : Marcellus (titres), Alegreya Sans (texte). */
+   Polices hébergées sur le site : Marcellus (titres), Alegreya Sans (texte), Great Vibes (prénoms). */
 
 @font-face { font-family: "Marcellus"; src: url("../fonts/marcellus-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Great Vibes"; src: url("../fonts/great-vibes-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 
 :root {
   --ecorce: #2e1e10;
@@ -37,6 +38,7 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3 { font-family: "Marcellus", "Palatino Linotype", Georgia, serif; font-weight: 400; color: var(--or-patine); line-height: 1.2; }
+h1, h2, h3, .chapo, .lieu-court, .soins .detail { text-wrap: balance; }
 p { margin: 0 0 1rem; }
 a { color: var(--or-patine); text-underline-offset: 0.18em; }
 a:hover { color: var(--or-vif); }
@@ -92,40 +94,70 @@ a:hover { color: var(--or-vif); }
 .bouton-plein:hover { background: var(--or-vif); color: var(--ecorce); }
 .site-entete .bouton { display: none; }
 
-/* ---------- Accueil ---------- */
+/* ---------- Accueil : Sandy et Sandra montrent le logo Sérénita ---------- */
 
 .accueil {
   position: relative;
-  display: grid;
-  place-items: center;
-  min-height: min(74vh, 40rem);
-  overflow: hidden;
+  padding: clamp(1.75rem, 4vw, 3.25rem) 1rem 0;
+  background:
+    radial-gradient(ellipse 34% 40% at 50% 30%, rgba(241, 208, 81, 0.14), rgba(241, 208, 81, 0) 72%),
+    radial-gradient(ellipse 85% 70% at 50% 20%, rgba(225, 186, 125, 0.09), rgba(225, 186, 125, 0) 75%),
+    var(--ecorce);
   text-align: center;
 }
-.accueil picture, .accueil picture img {
-  position: absolute;
-  inset: 0;
+.triptyque {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.5rem, 2.5vw, 2.25rem);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  color: var(--sable);
+  text-decoration: none;
+}
+.portrait .cadre {
+  display: block;
   width: 100%;
-  height: 100%;
+  padding: clamp(0.2rem, 0.6vw, 0.4rem);
+  border: 1px solid var(--or-patine);
+  border-radius: 12px;
+  background: var(--ecorce-sombre);
 }
-.accueil picture img { object-fit: cover; object-position: center 30%; }
-.accueil::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(46, 30, 16, 0.70) 0%, rgba(46, 30, 16, 0.82) 55%, rgba(46, 30, 16, 0.97) 100%);
+.portrait .cadre img { width: 100%; height: auto; border-radius: 8px; }
+.portrait .prenom-script {
+  margin-top: 0.3rem;
+  font-family: "Great Vibes", "Snell Roundhand", cursive;
+  font-size: clamp(1.75rem, 3.6vw, 3rem);
+  line-height: 1.15;
+  color: var(--or-patine);
 }
+.portrait .decouvrir {
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
+  color: var(--sable-doux);
+  text-decoration: underline;
+  text-decoration-color: var(--filet);
+  text-underline-offset: 0.25em;
+}
+.portrait:hover { color: var(--sable); }
+.portrait:hover .cadre { border-color: var(--or-vif); }
+.portrait:hover .decouvrir { color: var(--or-vif); text-decoration-color: currentColor; }
+.triptyque-logo img { width: 100%; max-width: 17rem; margin: 0 auto; }
+
 .accueil-contenu {
-  position: relative;
-  z-index: 1;
   max-width: 54rem;
-  padding: 4rem 1.25rem 3.5rem;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 3rem) 0.25rem clamp(2.5rem, 5vw, 4rem);
 }
 .accueil h1 {
   margin: 0 0 1.25rem;
-  font-size: clamp(2.3rem, 4vw + 1rem, 3.5rem);
+  font-size: clamp(2.1rem, 3.4vw + 1rem, 3.25rem);
   color: var(--sable);
-  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.35);
 }
 .accueil .intro {
   max-width: 34rem;
@@ -211,12 +243,13 @@ a:hover { color: var(--or-vif); }
   border-radius: 50%;
 }
 
-/* Carte des soins et tarifs */
+/* Carte des soins et tarifs : palmes dorées et points de conduite, comme la carte imprimée */
+.titre-centre { text-align: center; }
 .carte {
   position: relative;
   max-width: 46rem;
-  margin: 1rem auto 0;
-  padding: 3rem 1.5rem 1.5rem;
+  margin: 2.5rem auto 0;
+  padding: 3rem 4rem 2rem;
   background: var(--ecorce);
   border: 1px solid var(--or-patine);
   border-radius: 2rem;
@@ -229,32 +262,83 @@ a:hover { color: var(--or-vif); }
   width: 1.6rem;
   height: 1.6rem;
   margin-left: -0.8rem;
-  background: var(--ecorce-sombre);
+  background: var(--ecorce);
   border: 1px solid var(--or-patine);
   border-radius: 50%;
 }
-.carte h2 { text-align: center; }
-.prestations { margin: 0; padding: 0; list-style: none; }
-.prestations li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding: 1.2rem 0.25rem;
-  border-top: 1px solid var(--filet);
+.palme {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  width: 2.75rem;
+  background: url("../img/palme.png") center top / 100% auto repeat-y;
+  pointer-events: none;
 }
-.prestations li:first-child { border-top: 0; }
-.prestations h3 { margin: 0; font-size: 1.3125rem; }
-.prestations .detail { margin: 0.2rem 0 0; color: var(--sable-doux); }
-.prestations .prix { margin: 0; flex-shrink: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.prestations .prix b { font-weight: 700; }
-.carte .rappel { margin: 1.25rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--filet); text-align: center; color: var(--sable-doux); }
+.palme-gauche { left: 0.6rem; }
+.palme-droite { right: 0.6rem; transform: scaleX(-1); }
+.soins { margin: 0; padding: 0; list-style: none; text-align: center; }
+.soins li { padding: 0.85rem 0; }
+.soins h3 {
+  margin: 0;
+  font-family: "Alegreya Sans", "Gill Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--or-patine);
+}
+.soins .detail { margin: 0.1rem 0 0; color: var(--sable); }
+.ligne {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  max-width: 15rem;
+  margin: 0.3rem auto 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.ligne .points {
+  flex: 1;
+  min-width: 1.5rem;
+  border-bottom: 2px dotted rgba(225, 186, 125, 0.55);
+  transform: translateY(-0.3em);
+}
+.ligne .prix { font-weight: 700; }
+.carte .rappel {
+  max-width: 20rem;
+  margin: 1.25rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--filet);
+  text-align: center;
+  color: var(--sable-doux);
+}
 
-/* Équipe */
+/* Équipe : une partie pour Sandy, une pour Sandra */
 .equipe { text-align: center; }
-.equipe .bandeau { width: 100%; max-width: 40rem; margin: 0 auto; border-radius: 4px; }
-.equipe .chapo { margin: 0 auto; }
-.equipe .citation { max-width: 32rem; margin: 2rem auto 0; }
+.equipe .chapo { margin: 0 auto 2rem; }
+.equipe .bandeau { width: 100%; max-width: 40rem; margin: 0 auto; border-radius: 6px; }
+.praticiennes {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 58rem;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+.praticienne {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.praticienne img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
+.praticienne h3 {
+  margin: 0 0 0.4rem;
+  font-family: "Great Vibes", "Snell Roundhand", cursive;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--or-patine);
+}
+.praticienne .citation { margin: 0 0 1.25rem; }
+.praticienne .citation p { font-size: 1.2rem; }
 
 /* Lieu */
 .citation-haut { margin-top: 0; }
@@ -321,14 +405,14 @@ body.avec-barre { padding-bottom: 4.75rem; }
 }
 
 @media (min-width: 860px) {
-  .accueil { min-height: min(86vh, 46rem); }
   .menu ul { display: flex; gap: 1.75rem; }
   .site-entete .bouton { display: inline-flex; }
   .marque img { height: 3.8rem; }
   .paire { grid-template-columns: 5fr 6fr; gap: 4rem; }
   .paire.inversee .photo { order: 2; }
   .paire.inversee { grid-template-columns: 6fr 5fr; }
-  .carte { padding: 3.5rem 3rem 2rem; }
+  .praticiennes { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .praticienne { grid-template-columns: 9rem minmax(0, 1fr); }
   .barre-appel { display: none; }
   body.avec-barre { padding-bottom: 0; }
 }
@@ -341,25 +425,33 @@ body.avec-barre { padding-bottom: 4.75rem; }
   .paire .publics { grid-template-columns: 1fr 1fr; }
 }
 
-/* Sur téléphone : photo d'accueil affichée en entier (pas recadrée), texte en dessous ;
-   la barre d'appel remplace les boutons de l'accueil */
+/* Sur téléphone, la barre d'appel remplace les boutons de l'accueil */
 @media (max-width: 859px) {
-  .accueil { display: block; min-height: 0; }
-  .accueil picture, .accueil picture img { position: static; width: 100%; height: auto; }
-  .accueil::after { display: none; }
-  .accueil-contenu { padding: 2rem 1.25rem 2.75rem; }
-  .accueil h1 { text-shadow: none; }
   .accueil .appels { display: none; }
 }
 
+@media (min-width: 700px) {
+  .carte { padding: 3.5rem 11rem 2.5rem; }
+  .palme {
+    top: 2.5rem;
+    bottom: 2.5rem;
+    width: 8.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .palme-gauche { left: 1.5rem; }
+  .palme-droite { right: 1.5rem; }
+  .soins h3 { font-size: 1.3rem; }
+}
+
 @media (max-width: 479px) {
-  .prestations li { flex-direction: column; gap: 0.4rem; }
-  .prestations .prix { text-align: left; }
   .section { padding: 4rem 1.25rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
+  .portrait .cadre { transition: border-color 0.2s ease; }
 }
 
 .visuellement-cache {

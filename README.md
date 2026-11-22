@@ -8,8 +8,8 @@ Le QR code imprimé sur le matériel de Sandy ouvre `https://sandycrazyconcept.f
 - `mentions-legales.html` : mentions légales.
 - `css/style.css` : la mise en page (couleurs de la page Canva : brun #2e1e10, dorés #e1ba7d / #f1d051).
 - `img/logo-serenita.png` : logo doré sur fond transparent, extrait du bandeau Canva (en attendant le fichier d'origine du logo).
-- `img/` : photos optimisées (JPEG + WebP), sans métadonnées (EXIF).
-- `fonts/` : polices Marcellus et Alegreya Sans (licence SIL Open Font License), hébergées ici : aucun appel externe, aucun cookie.
+- `img/` : photos optimisées (JPEG + WebP), sans métadonnées (EXIF). `portrait-sandy` et `portrait-sandra` : découpés dans le bandeau Canva « Sandy / Sérénita / Sandra » (800 px de large : photos d'origine en meilleure qualité à demander). `palme.png` : palme dorée extraite de l'ancienne carte des tarifs, fond rendu transparent.
+- `fonts/` : polices Marcellus, Alegreya Sans et Great Vibes (prénoms) — licence SIL Open Font License, hébergées ici : aucun appel externe, aucun cookie.
 
 ## Publication
 GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fichier `CNAME`). Adresse GitHub d'origine : https://roxgen.github.io/sandycrazyconcept-site/ (redirige vers le domaine).
@@ -33,3 +33,5 @@ GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fi
 - 22/11/2026 (Roméo) : version « pro » mise en ligne ; la prise de rendez-vous en ligne se fera avec Planningen (bouton « Réserver en ligne » vers la page de réservation de Sérénita, quand l'app sera publiée).
 - 22/11/2026 (Roméo) : les liens et le texte renvoient vers le Sunrise Beach Hôtel (https://www.hotelsunrise-gruissan.com), où se trouve la salle de massage de Sandy. Pasha Plage n'est plus mentionné.
 - 22/11/2026 (Roméo) : lien « 5/5 sur Google, 26 avis » dans l'accueil et bouton « Itinéraire » vers la fiche Google de Sandy (https://maps.google.com/?cid=7879985521520299105). Ses comptes Instagram et Facebook sont personnels : pas sur le site.
+- 22/11/2026 (Roméo, d'après les demandes de Sandy) : accueil = Sandy et Sandra qui montrent le logo Sérénita (fond brun au lieu du blanc), un clic sur chaque photo mène à sa partie (#sandy, #sandra) ; « salle de massage » devient « espace soins » ; carte des soins refaite comme la carte imprimée (palmes dorées, points de conduite), sans la phrase du haut : Massage aux huiles essentielles chaudes bio 30 min 40 € / 60 min 70 €, Massage du dos et cervicales 40 min 50 €, Massages du monde 60 min 80 € (gardé), Visage Sérénita (ex-« Facial ») 20 min 30 €, Crânien Sérénita 20 min 30 €, Sérénita prénatal et postnatal 45 min 50 € (nouveau), Sérénita 4 mains 45 min 120 €, Duo Sérénita 60 min 140 € (au lieu de 150 €), Massage thérapeutique « Skin & Soul » by Sandy 90 min 110 € (à la place de 120 min 150 €, à confirmer), Ventouses (médecine chinoise) 45 min 60 €.
+- 22/11/2026 (Roméo) : Sérénita reste en avant sur sandycrazyconcept.fr ; l'idée d'en faire le site « Skin & Soul » est remise à plus tard (le camping et le spa ouvrent en avril, sous un autre nom). Histoires de Sandy et de Sandra : textes à recevoir.
