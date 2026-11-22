@@ -331,8 +331,14 @@ body.avec-barre { padding-bottom: 4.75rem; }
   .paire .publics { grid-template-columns: 1fr 1fr; }
 }
 
-/* Sur téléphone, la barre d'appel remplace les boutons de l'accueil */
+/* Sur téléphone : photo d'accueil affichée en entier (pas recadrée), texte en dessous ;
+   la barre d'appel remplace les boutons de l'accueil */
 @media (max-width: 859px) {
+  .accueil { display: block; min-height: 0; }
+  .accueil picture, .accueil picture img { position: static; width: 100%; height: auto; }
+  .accueil::after { display: none; }
+  .accueil-contenu { padding: 2rem 1.25rem 2.75rem; }
+  .accueil h1 { text-shadow: none; }
   .accueil .appels { display: none; }
 }
 
