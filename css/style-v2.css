@@ -1,0 +1,343 @@
+/* Sérénita Gruissan — version 2 (« pro »)
+   Couleurs de la page Canva d'origine : brun #2e1e10, dorés #e1ba7d / #f1d051.
+   Polices hébergées sur le site : Marcellus (titres), Alegreya Sans (texte). */
+
+@font-face { font-family: "Marcellus"; src: url("../fonts/marcellus-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  --ecorce: #2e1e10;
+  --ecorce-sombre: #241608;
+  --ecorce-claire: #3a2716;
+  --sable: #f3e9d8;
+  --sable-doux: #d9cbb3;
+  --or-patine: #e1ba7d;
+  --or-vif: #f1d051;
+  --bronze: #ac8507;
+  --filet: rgba(225, 186, 125, 0.28);
+  --mesure: 36rem;
+  --entete: 4.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--ecorce);
+  color: var(--sable);
+  font-family: "Alegreya Sans", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: "Marcellus", "Palatino Linotype", Georgia, serif; font-weight: 400; color: var(--or-patine); line-height: 1.2; }
+p { margin: 0 0 1rem; }
+a { color: var(--or-patine); text-underline-offset: 0.18em; }
+a:hover { color: var(--or-vif); }
+:focus-visible { outline: 2px solid var(--or-vif); outline-offset: 3px; border-radius: 4px; }
+[id] { scroll-margin-top: calc(var(--entete) + 1rem); }
+
+.evitement { position: absolute; left: -9999px; top: 0; }
+.evitement:focus { left: 1rem; top: 1rem; z-index: 50; padding: 0.5rem 1rem; background: var(--sable); color: var(--ecorce); }
+
+.conteneur { max-width: 64rem; margin: 0 auto; }
+
+/* ---------- En-tête fixe ---------- */
+
+.site-entete {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(36, 22, 8, 0.94);
+  border-bottom: 1px solid rgba(172, 133, 7, 0.35);
+}
+@supports (backdrop-filter: blur(6px)) {
+  .site-entete { background: rgba(36, 22, 8, 0.82); backdrop-filter: blur(6px); }
+}
+.site-entete .conteneur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: var(--entete);
+  padding: 0.4rem 1.25rem;
+}
+.marque { display: block; border-radius: 6px; }
+.marque img { width: auto; height: 3.4rem; }
+
+.menu ul { display: none; margin: 0; padding: 0; list-style: none; }
+.menu a { color: var(--sable); text-decoration: none; }
+.menu a:hover { color: var(--or-vif); }
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 999px;
+  color: var(--sable);
+  text-decoration: none;
+  line-height: 1.3;
+}
+.bouton:hover { background: rgba(225, 186, 125, 0.14); color: var(--sable); }
+.bouton-plein { background: var(--or-patine); color: var(--ecorce); }
+.bouton-plein:hover { background: var(--or-vif); color: var(--ecorce); }
+.site-entete .bouton { display: none; }
+
+/* ---------- Accueil ---------- */
+
+.accueil {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: min(74vh, 40rem);
+  overflow: hidden;
+  text-align: center;
+}
+.accueil picture, .accueil picture img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.accueil picture img { object-fit: cover; object-position: center 30%; }
+.accueil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46, 30, 16, 0.70) 0%, rgba(46, 30, 16, 0.82) 55%, rgba(46, 30, 16, 0.97) 100%);
+}
+.accueil-contenu {
+  position: relative;
+  z-index: 1;
+  max-width: 54rem;
+  padding: 4rem 1.25rem 3.5rem;
+}
+.accueil h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.3rem, 4vw + 1rem, 3.5rem);
+  color: var(--sable);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.35);
+}
+.accueil .intro {
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.2rem, 0.6vw + 1.05rem, 1.375rem);
+  line-height: 1.6;
+}
+
+.appels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.appels a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 13rem;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 999px;
+  background: rgba(36, 22, 8, 0.55);
+  color: var(--sable);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.appels a:hover { background: rgba(225, 186, 125, 0.16); color: var(--sable); }
+.appels .prenom { font-family: "Marcellus", Georgia, serif; font-size: 1.3125rem; color: var(--or-vif); }
+.appels .numero { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
+
+.accueil .lieu-court { margin: 0; color: var(--sable-doux); }
+
+/* ---------- Sections ---------- */
+
+.section { padding: 5rem 1.25rem; }
+.section-alt { background: var(--ecorce-sombre); }
+.section h2 { margin: 0 0 1.25rem; font-size: clamp(2rem, 2.5vw + 1.2rem, 2.6rem); }
+.chapo { max-width: var(--mesure); font-size: 1.25rem; }
+
+.citation { margin: 1.75rem 0 0; }
+.citation blockquote { margin: 0; }
+.citation p { margin: 0; font-style: italic; font-size: clamp(1.25rem, 0.6vw + 1.1rem, 1.5rem); line-height: 1.55; color: var(--sable); }
+.citation figcaption { margin-top: 0.75rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); }
+
+.paire { display: grid; gap: 2.5rem; align-items: center; }
+.paire .photo img { width: 100%; border-radius: 6px; }
+
+/* Pour qui */
+.publics {
+  display: grid;
+  gap: 0.25rem 2rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.publics li {
+  position: relative;
+  padding: 0.85rem 0 0.85rem 1.75rem;
+  border-bottom: 1px solid var(--filet);
+}
+.publics li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 1.45rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 50%;
+}
+
+/* Carte des soins et tarifs */
+.carte {
+  position: relative;
+  max-width: 46rem;
+  margin: 1rem auto 0;
+  padding: 3rem 1.5rem 1.5rem;
+  background: var(--ecorce);
+  border: 1px solid var(--or-patine);
+  border-radius: 2rem;
+}
+.carte::before {
+  content: "";
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: -0.8rem;
+  background: var(--ecorce-sombre);
+  border: 1px solid var(--or-patine);
+  border-radius: 50%;
+}
+.carte h2 { text-align: center; }
+.prestations { margin: 0; padding: 0; list-style: none; }
+.prestations li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.2rem 0.25rem;
+  border-top: 1px solid var(--filet);
+}
+.prestations li:first-child { border-top: 0; }
+.prestations h3 { margin: 0; font-size: 1.3125rem; }
+.prestations .detail { margin: 0.2rem 0 0; color: var(--sable-doux); }
+.prestations .prix { margin: 0; flex-shrink: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.prestations .prix b { font-weight: 700; }
+.carte .rappel { margin: 1.25rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--filet); text-align: center; color: var(--sable-doux); }
+
+/* Équipe */
+.equipe { text-align: center; }
+.equipe .bandeau { width: 100%; max-width: 40rem; margin: 0 auto; border-radius: 4px; }
+.equipe .chapo { margin: 0 auto; }
+.equipe .citation { max-width: 32rem; margin: 2rem auto 0; }
+
+/* Lieu */
+.citation-haut { margin-top: 0; }
+.texte-lieu { margin-top: 1.5rem; }
+.adresse { margin: 1.5rem 0; font-style: normal; color: var(--sable); }
+.adresse strong { font-family: "Marcellus", Georgia, serif; font-weight: 400; color: var(--or-patine); font-size: 1.2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.hotel-logo img { width: 8.5rem; border-radius: 10px; }
+
+/* Contact */
+.contact { text-align: center; }
+.contact .chapo { margin: 0 auto 2rem; }
+.contact .adresse { margin-top: 2rem; }
+
+/* Pied de page */
+.pied {
+  padding: 3rem 1.25rem 2.5rem;
+  border-top: 1px solid rgba(172, 133, 7, 0.45);
+  background: var(--ecorce-sombre);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--sable-doux);
+}
+.pied img { width: 9rem; margin: 0 auto 1rem; }
+.pied p { margin: 0.3rem 0; }
+
+/* Barre d'appel sur téléphone */
+.barre-appel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+  background: rgba(36, 22, 8, 0.96);
+  border-top: 1px solid rgba(172, 133, 7, 0.5);
+}
+.barre-appel a {
+  display: block;
+  padding: 0.7rem 0.5rem;
+  border-radius: 999px;
+  background: var(--or-patine);
+  color: var(--ecorce);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.barre-appel a:hover { background: var(--or-vif); color: var(--ecorce); }
+body.avec-barre { padding-bottom: 4.75rem; }
+
+/* Page de texte (mentions légales) */
+.page-texte { max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+.page-texte h1 { font-size: clamp(2rem, 3vw + 1rem, 2.5rem); margin: 0 0 1.5rem; }
+.page-texte h2 { font-size: 1.5rem; margin: 2.25rem 0 0.5rem; }
+.page-texte p { margin: 0 0 0.75rem; }
+
+/* ---------- Écrans moyens et grands ---------- */
+
+@media (min-width: 600px) {
+  .publics { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 860px) {
+  .accueil { min-height: min(86vh, 46rem); }
+  .menu ul { display: flex; gap: 1.75rem; }
+  .site-entete .bouton { display: inline-flex; }
+  .marque img { height: 3.8rem; }
+  .paire { grid-template-columns: 5fr 6fr; gap: 4rem; }
+  .paire.inversee .photo { order: 2; }
+  .paire.inversee { grid-template-columns: 6fr 5fr; }
+  .carte { padding: 3.5rem 3rem 2rem; }
+  .barre-appel { display: none; }
+  body.avec-barre { padding-bottom: 0; }
+}
+
+@media (min-width: 1000px) {
+  .publics { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* Sur téléphone, la barre d'appel remplace les boutons de l'accueil */
+@media (max-width: 859px) {
+  .accueil .appels { display: none; }
+}
+
+@media (max-width: 479px) {
+  .prestations li { flex-direction: column; gap: 0.4rem; }
+  .prestations .prix { text-align: left; }
+  .section { padding: 4rem 1.25rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
+}
