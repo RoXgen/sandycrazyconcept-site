@@ -161,6 +161,16 @@ a:hover { color: var(--or-vif); }
 .appels .numero { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
 
 .accueil .lieu-court { margin: 0; color: var(--sable-doux); }
+.accueil .avis-google { margin: 0.9rem 0 0; }
+.accueil .avis-google a { color: var(--sable); text-decoration: none; }
+.accueil .avis-google .avis-texte {
+  text-decoration: underline;
+  text-decoration-color: var(--filet);
+  text-underline-offset: 0.25em;
+}
+.accueil .avis-google a:hover { color: var(--or-vif); }
+.accueil .avis-google a:hover .avis-texte { text-decoration-color: currentColor; }
+.accueil .avis-google .etoiles { margin-right: 0.35em; color: var(--or-vif); letter-spacing: 0.08em; }
 
 /* ---------- Sections ---------- */
 
@@ -350,4 +360,13 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (prefers-reduced-motion: no-preference) {
   a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
+}
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

@@ -27,7 +27,9 @@ GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fi
 ## Points ouverts
 - Mentions légales publiées le 22/11/2026 sans statut ni SIRET, adresse professionnelle et e-mail (choix de Roméo) : à compléter dès que possible (obligation légale pour un site professionnel).
 - Le ® de « Skin & Soul by Sandy » a été retiré (à remettre seulement si la marque est déposée à l'INPI).
+- Note Google écrite en dur dans l'accueil (« 5/5 sur Google, 26 avis », relevée le 22/11/2026) : à mettre à jour quand la note ou le nombre d'avis change.
 
 ## Décisions
 - 22/11/2026 (Roméo) : version « pro » mise en ligne ; la prise de rendez-vous en ligne se fera avec Planningen (bouton « Réserver en ligne » vers la page de réservation de Sérénita, quand l'app sera publiée).
 - 22/11/2026 (Roméo) : les liens et le texte renvoient vers le Sunrise Beach Hôtel (https://www.hotelsunrise-gruissan.com), où se trouve la salle de massage de Sandy. Pasha Plage n'est plus mentionné.
+- 22/11/2026 (Roméo) : lien « 5/5 sur Google, 26 avis » dans l'accueil et bouton « Itinéraire » vers la fiche Google de Sandy (https://maps.google.com/?cid=7879985521520299105). Ses comptes Instagram et Facebook sont personnels : pas sur le site.
