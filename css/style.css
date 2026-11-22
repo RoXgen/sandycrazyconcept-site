@@ -1,0 +1,352 @@
+/* Sérénita Gruissan — feuille de style unique
+   Couleurs reprises de la page Canva d'origine (fond brun, accents dorés).
+   Polices hébergées sur le site (aucun appel à un service externe). */
+
+@font-face {
+  font-family: "Marcellus";
+  src: url("../fonts/marcellus-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ecorce: #2e1e10;          /* fond de page (Canva) */
+  --ecorce-sombre: #241608;   /* fond de la carte des tarifs */
+  --sable: #f3e9d8;           /* texte courant */
+  --sable-doux: #d9cbb3;      /* texte secondaire */
+  --or-patine: #e1ba7d;       /* titres, liens, cadres */
+  --or-vif: #f1d051;          /* focus clavier, prénoms */
+  --bronze: #ac8507;          /* filets */
+  --mesure: 36rem;            /* largeur des textes */
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ecorce);
+  color: var(--sable);
+  font-family: "Alegreya Sans", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+  font-family: "Marcellus", "Palatino Linotype", Georgia, serif;
+  font-weight: 400;
+  color: var(--or-patine);
+  line-height: 1.2;
+}
+
+a { color: var(--or-patine); text-underline-offset: 0.18em; }
+a:hover { color: var(--or-vif); }
+
+:focus-visible {
+  outline: 2px solid var(--or-vif);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.evitement {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+.evitement:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--sable);
+  color: var(--ecorce);
+}
+
+/* ---------- En-tête ---------- */
+
+.entete {
+  padding: 1.5rem 1.25rem 3.5rem;
+  text-align: center;
+}
+
+.bandeau {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.entete h1 {
+  margin: 2rem 0 1.25rem;
+  font-size: clamp(2.25rem, 4vw + 1.25rem, 3rem);
+}
+
+.intro {
+  max-width: var(--mesure);
+  margin: 0 auto 2.25rem;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+.intro span { display: block; }
+
+.appels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.appels a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 12.5rem;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 999px;
+  color: var(--sable);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.appels a:hover { background: rgba(225, 186, 125, 0.12); color: var(--sable); }
+
+.appels .prenom {
+  font-family: "Marcellus", Georgia, serif;
+  font-size: 1.3125rem;
+  color: var(--or-vif);
+}
+.appels .numero {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}
+
+.lieu {
+  margin: 0 0 1rem;
+  color: var(--sable-doux);
+}
+
+.hotel {
+  display: inline-block;
+  border-radius: 14px;
+}
+.hotel img {
+  width: 10rem;
+  border-radius: 14px;
+}
+
+/* ---------- Citations et photos ---------- */
+
+.citation {
+  margin: 0;
+}
+.citation blockquote {
+  margin: 0;
+}
+.citation p {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(1.3125rem, 0.6vw + 1.15rem, 1.5rem);
+  line-height: 1.55;
+}
+.citation figcaption {
+  margin-top: 0.9rem;
+  font-family: "Marcellus", Georgia, serif;
+  color: var(--or-patine);
+}
+
+.citation-seule {
+  max-width: var(--mesure);
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+.citation-seule::before,
+.citation-seule::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  margin: 0 auto;
+  background: var(--bronze);
+}
+.citation-seule::before { margin-bottom: 2rem; }
+.citation-seule::after { margin-top: 2rem; }
+
+.paire {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+.paire .citation { text-align: center; }
+
+.photo-large {
+  width: 100%;
+  max-width: 62rem;
+  margin: 1.5rem auto;
+}
+
+/* ---------- Carte des soins et tarifs ---------- */
+
+.carte {
+  position: relative;
+  max-width: 46rem;
+  margin: 4rem auto;
+  padding: 3rem 1.5rem 1.5rem;
+  background: var(--ecorce-sombre);
+  border: 1px solid var(--or-patine);
+  border-radius: 2rem;
+}
+/* petit anneau doré au sommet, comme sur la carte d'origine */
+.carte::before {
+  content: "";
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: -0.8rem;
+  background: var(--ecorce);
+  border: 1px solid var(--or-patine);
+  border-radius: 50%;
+}
+
+.carte h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.25rem);
+}
+
+.prestations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.prestations li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.25rem 0.25rem;
+  border-top: 1px solid rgba(225, 186, 125, 0.28);
+}
+.prestations li:first-child { border-top: 0; }
+
+.prestations h3 {
+  margin: 0;
+  font-size: 1.3125rem;
+}
+.prestations .detail {
+  margin: 0.2rem 0 0;
+  color: var(--sable-doux);
+}
+.prestations .prix {
+  margin: 0;
+  flex-shrink: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.prestations .prix b {
+  font-weight: 700;
+  color: var(--sable);
+}
+
+.carte .rappel {
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(225, 186, 125, 0.28);
+  text-align: center;
+  color: var(--sable-doux);
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+  padding: 3rem 1.25rem 4rem;
+  text-align: center;
+}
+.contact h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.25rem);
+}
+.contact > p { margin: 0 auto 1.5rem; max-width: var(--mesure); }
+
+/* ---------- Pied de page ---------- */
+
+.pied {
+  padding: 2rem 1.25rem 2.5rem;
+  border-top: 1px solid rgba(172, 133, 7, 0.45);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--sable-doux);
+}
+.pied p { margin: 0.25rem 0; }
+
+/* ---------- Page de mentions légales ---------- */
+
+.page-texte {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+.page-texte h1 { font-size: clamp(2rem, 3vw + 1rem, 2.5rem); margin: 1.5rem 0; }
+.page-texte h2 { font-size: 1.5rem; margin: 2.25rem 0 0.5rem; }
+.page-texte p { margin: 0 0 0.75rem; }
+.a-completer {
+  padding: 0 0.3em;
+  border-radius: 4px;
+  background: rgba(241, 208, 81, 0.18);
+  color: var(--or-vif);
+}
+
+/* ---------- Écrans moyens et grands ---------- */
+
+@media (min-width: 760px) {
+  .paire { grid-template-columns: 2fr 3fr; gap: 3.5rem; }
+  .paire .citation { text-align: left; }
+  .paire.inversee { grid-template-columns: 3fr 2fr; }
+  .paire.inversee .photo { order: 2; }
+  .carte { padding: 3.5rem 3rem 2rem; }
+}
+
+@media (max-width: 479px) {
+  .prestations li { flex-direction: column; gap: 0.4rem; }
+  .prestations .prix { text-align: left; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .appels a, a { transition: background-color 0.2s ease, color 0.2s ease; }
+}
