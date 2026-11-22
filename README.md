@@ -20,6 +20,7 @@ GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fi
    créer les A de `sandycrazyconcept.fr` vers `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    et le CNAME `www` vers `roxgen.github.io`. Garder le MX. Ne jamais cliquer « Réinitialisez les enregistrements DNS ».
 4. GitHub : vérifier le domaine (Settings du compte › Pages › Verified domains) pour éviter qu'un autre compte puisse l'utiliser.
+   Fait le 22/11/2026 : TXT `_github-pages-challenge-roxgen.sandycrazyconcept.fr` créé chez one.com, domaine « Verified ». Ne pas supprimer ce TXT.
 5. Tester le QR code imprimé (https, avec et sans www).
 
 ## Points à valider
