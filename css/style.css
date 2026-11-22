@@ -325,12 +325,6 @@ a:hover { color: var(--or-vif); }
 .page-texte h1 { font-size: clamp(2rem, 3vw + 1rem, 2.5rem); margin: 1.5rem 0; }
 .page-texte h2 { font-size: 1.5rem; margin: 2.25rem 0 0.5rem; }
 .page-texte p { margin: 0 0 0.75rem; }
-.a-completer {
-  padding: 0 0.3em;
-  border-radius: 4px;
-  background: rgba(241, 208, 81, 0.18);
-  color: var(--or-vif);
-}
 
 /* ---------- Écrans moyens et grands ---------- */
 

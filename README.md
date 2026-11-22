@@ -23,7 +23,9 @@ GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fi
    Fait le 22/11/2026 : TXT `_github-pages-challenge-roxgen.sandycrazyconcept.fr` créé chez one.com, domaine « Verified ». Ne pas supprimer ce TXT.
 5. Tester le QR code imprimé (https, avec et sans www).
 
-## Points à valider
-- Mentions légales : statut et SIRET, adresse professionnelle, e-mail.
+## Points ouverts
+- Mentions légales publiées le 22/11/2026 sans statut ni SIRET, adresse professionnelle et e-mail (choix de Roméo) : à compléter dès que possible (obligation légale pour un site professionnel).
 - Le ® de « Skin & Soul by Sandy » a été retiré (à remettre seulement si la marque est déposée à l'INPI).
-- Les liens vers l'hôtel pointent vers https://www.hotelsunrise-gruissan.com (la page Canva renvoyait aussi vers le site de Pasha Plage).
+
+## Décisions
+- 22/11/2026 (Roméo) : les liens et le texte renvoient vers le Sunrise Beach Hôtel (https://www.hotelsunrise-gruissan.com), où se trouve la salle de massage de Sandy. Pasha Plage n'est plus mentionné.
