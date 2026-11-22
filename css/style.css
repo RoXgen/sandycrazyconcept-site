@@ -121,15 +121,8 @@ a:hover { color: var(--or-vif); }
   color: var(--sable);
   text-decoration: none;
 }
-.portrait .cadre {
-  display: block;
-  width: 100%;
-  padding: clamp(0.2rem, 0.6vw, 0.4rem);
-  border: 1px solid var(--or-patine);
-  border-radius: 12px;
-  background: var(--ecorce-sombre);
-}
-.portrait .cadre img { width: 100%; height: auto; border-radius: 8px; }
+.portrait .silhouette { display: block; width: 100%; }
+.portrait .silhouette img { width: 100%; height: auto; }
 .portrait .prenom-script {
   margin-top: 0.3rem;
   font-family: "Great Vibes", "Snell Roundhand", cursive;
@@ -145,7 +138,7 @@ a:hover { color: var(--or-vif); }
   text-underline-offset: 0.25em;
 }
 .portrait:hover { color: var(--sable); }
-.portrait:hover .cadre { border-color: var(--or-vif); }
+.portrait:hover .silhouette img { filter: brightness(1.06); }
 .portrait:hover .decouvrir { color: var(--or-vif); text-decoration-color: currentColor; }
 .triptyque-logo img { width: 100%; max-width: 17rem; margin: 0 auto; }
 
@@ -303,6 +296,7 @@ a:hover { color: var(--or-vif); }
   transform: translateY(-0.3em);
 }
 .ligne .prix { font-weight: 700; }
+.ligne-seule { justify-content: center; }
 .carte .rappel {
   max-width: 20rem;
   margin: 1.25rem auto 0;
@@ -329,7 +323,7 @@ a:hover { color: var(--or-vif); }
   gap: 1.25rem;
   align-items: start;
 }
-.praticienne img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
+.praticienne img { width: 100%; }
 .praticienne h3 {
   margin: 0 0 0.4rem;
   font-family: "Great Vibes", "Snell Roundhand", cursive;
@@ -451,7 +445,7 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (prefers-reduced-motion: no-preference) {
   a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
-  .portrait .cadre { transition: border-color 0.2s ease; }
+  .portrait .silhouette img { transition: filter 0.2s ease; }
 }
 
 .visuellement-cache {
