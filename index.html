@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,30 +66,26 @@
     <section class="accueil" id="haut" aria-labelledby="titre-accueil">
       <div class="triptyque">
         <a class="portrait" href="#sandy" aria-label="Sandy : découvrir son histoire">
-          <span class="silhouette">
-            <picture>
-              <source type="image/webp" srcset="img/detoure-sandy.webp">
-              <img src="img/detoure-sandy.png" width="249" height="310" fetchpriority="high" alt="">
-            </picture>
-          </span>
+          <picture>
+            <source type="image/webp" srcset="img/portrait-sandy-ivoire.webp">
+            <img src="img/portrait-sandy-ivoire.png" width="249" height="356" fetchpriority="high" alt="">
+          </picture>
           <span class="prenom-script">Sandy</span>
           <span class="decouvrir">Son histoire</span>
         </a>
         <div class="triptyque-logo">
           <picture>
-            <source type="image/webp" srcset="img/logo-serenita-or.webp">
-            <img src="img/logo-serenita-or.png" width="640" height="394" fetchpriority="high" alt="Sérénita Gruissan">
+            <source type="image/webp" srcset="img/logo-serenita-ivoire.webp">
+            <img src="img/logo-serenita-ivoire.png" width="720" height="455" fetchpriority="high" alt="Sérénita Gruissan">
           </picture>
         </div>
-        <a class="portrait" href="#sandra" aria-label="Sandra : découvrir son histoire">
-          <span class="silhouette">
-            <picture>
-              <source type="image/webp" srcset="img/detoure-sandra.webp">
-              <img src="img/detoure-sandra.png" width="248" height="310" fetchpriority="high" alt="">
-            </picture>
-          </span>
+        <a class="portrait" href="#sandra" aria-label="Sandra : la découvrir">
+          <picture>
+            <source type="image/webp" srcset="img/portrait-sandra-ivoire.webp">
+            <img src="img/portrait-sandra-ivoire.png" width="248" height="356" fetchpriority="high" alt="">
+          </picture>
           <span class="prenom-script">Sandra</span>
-          <span class="decouvrir">Son histoire</span>
+          <span class="decouvrir">Découvrir</span>
         </a>
       </div>
       <div class="accueil-contenu">
@@ -152,67 +148,201 @@
       <div class="carte">
         <span class="palme palme-gauche" aria-hidden="true"></span>
         <span class="palme palme-droite" aria-hidden="true"></span>
+        <p class="soins-aide"><span aria-hidden="true">✦</span> Choisissez un soin pour découvrir son histoire et ses bienfaits.</p>
         <ul class="soins">
-          <li>
-            <h3>Massage aux huiles essentielles chaudes bio</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="huiles" aria-haspopup="dialog"><span class="soin-nom">Massage aux huiles essentielles chaudes bio</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>30&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">40&nbsp;€</span></p>
             <p class="ligne"><span>60&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">70&nbsp;€</span></p>
+            <div class="fiche" id="fiche-huiles">
+              <h4>Son histoire</h4>
+              <p>Les huiles parfumées accompagnent le massage depuis l’Antiquité, de l’Égypte à la Grèce. Le mot «&#8239;aromathérapie&#8239;» est né en France dans les années 1930, sous la plume du chimiste René-Maurice Gattefossé. Ici, les huiles bio sont tiédies avant le soin&nbsp;: leur chaleur enveloppe tout le corps.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Aide à relâcher les tensions du quotidien</li>
+                <li>Une chaleur qui détend en profondeur</li>
+                <li>Une peau nourrie et délicatement parfumée</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Visage Sérénita</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="visage" aria-haspopup="dialog"><span class="soin-nom">Visage Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">à l’huile de rose musquée du Chili</p>
             <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">30&nbsp;€</span></p>
+            <div class="fiche" id="fiche-visage">
+              <h4>Son histoire</h4>
+              <p>La rose musquée pousse à l’état sauvage dans les Andes. Au Chili, on presse ses graines pour obtenir une huile précieuse, connue pour prendre soin de la peau. Le soin l’associe à des gestes lents sur tout le visage.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Détend les traits et la mâchoire</li>
+                <li>Une peau nourrie et souple</li>
+                <li>Vingt minutes de calme absolu</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Crânien Sérénita</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="cranien" aria-haspopup="dialog"><span class="soin-nom">Crânien Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">30&nbsp;€</span></p>
+            <div class="fiche" id="fiche-cranien">
+              <h4>Son histoire</h4>
+              <p>Le massage de la tête vient d’une tradition familiale indienne, transmise de génération en génération. Il s’est fait connaître en Occident à la fin du XX<sup>e</sup>&nbsp;siècle sous le nom de «&#8239;champissage&#8239;». Les doigts parcourent le cuir chevelu, la nuque et les épaules.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Apaise un esprit trop plein</li>
+                <li>Détend la nuque et les épaules</li>
+                <li>Une pause courte et ressourçante</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Massage du dos et cervicales</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="dos" aria-haspopup="dialog"><span class="soin-nom">Massage du dos et cervicales</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>40&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">50&nbsp;€</span></p>
+            <div class="fiche" id="fiche-dos">
+              <h4>Son histoire</h4>
+              <p>Le dos porte le poids de nos journées&nbsp;: écrans, charges, stress. Ce soin se concentre là où les tensions s’installent le plus, des lombaires jusqu’à la nuque.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Cible les zones les plus tendues</li>
+                <li>Aide à dénouer la nuque et les épaules</li>
+                <li>Une sensation de légèreté en repartant</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Sérénita prénatal et postnatal</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="prenatal" aria-haspopup="dialog"><span class="soin-nom">Sérénita prénatal et postnatal</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>60&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">80&nbsp;€</span></p>
+            <div class="fiche" id="fiche-prenatal">
+              <h4>Son histoire</h4>
+              <p>Dans de nombreuses cultures, les femmes enceintes et les jeunes mamans reçoivent des massages pour traverser cette période unique. Ce soin perpétue cette tradition&nbsp;: une installation adaptée, des gestes doux et du temps pour soi.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Allège la sensation de jambes lourdes et de dos chargé</li>
+                <li>Un moment de calme pendant la grossesse</li>
+                <li>Après la naissance, se réapproprier son corps</li>
+              </ul>
+              <p class="fiche-note">Pendant la grossesse, parlez-en à votre sage-femme ou à votre médecin avant le rendez-vous.</p>
+            </div>
           </li>
-          <li>
-            <h3>Massages du monde</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="monde" aria-haspopup="dialog"><span class="soin-nom">Massages du monde</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">Soin intuitif et énergétique</p>
             <p class="ligne"><span>60&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">80&nbsp;€</span></p>
+            <div class="fiche" id="fiche-monde">
+              <h4>Son histoire</h4>
+              <p>Lomi-lomi d’Hawaï, abhyanga d’Inde, massage suédois&nbsp;: chaque continent a sa façon de toucher. Ce soin intuitif et énergétique s’en inspire et s’adapte à ce que votre corps exprime ce jour-là.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Un voyage des sens, sans quitter Gruissan</li>
+                <li>Un soin ajusté à votre état du jour</li>
+                <li>Une détente profonde du corps et de l’esprit</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Sérénita 4 mains</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="quatre_mains" aria-haspopup="dialog"><span class="soin-nom">Sérénita 4 mains</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">avec Sandy et Sandra</p>
             <p class="ligne"><span>45&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">120&nbsp;€</span></p>
+            <div class="fiche" id="fiche-quatre_mains">
+              <h4>Son histoire</h4>
+              <p>Deux praticiennes, des gestes en miroir&nbsp;: avec quatre mains, le corps ne sait plus quelle main suivre et finit par lâcher prise. Sandy et Sandra accordent leurs mouvements pour n’en faire qu’un.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Un lâcher-prise plus rapide</li>
+                <li>Une sensation d’enveloppement totale</li>
+                <li>Une expérience rare, à vivre au moins une fois</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Duo Sérénita</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="duo" aria-haspopup="dialog"><span class="soin-nom">Duo Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">avec Sandy et Sandra</p>
             <p class="ligne"><span>60&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">140&nbsp;€</span></p>
+            <div class="fiche" id="fiche-duo">
+              <h4>Son histoire</h4>
+              <p>Le duo se vit à deux, côte à côte&nbsp;: chacun reçoit son massage, au même moment. Un moment partagé, en couple, entre amis ou en famille.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Partager un vrai moment de détente</li>
+                <li>Une belle idée de cadeau à deux</li>
+                <li>Chacun son massage, au même rythme</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Ventouses</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="ventouses" aria-haspopup="dialog"><span class="soin-nom">Ventouses</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">médecine chinoise</p>
             <p class="ligne"><span>45&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">60&nbsp;€</span></p>
+            <div class="fiche" id="fiche-ventouses">
+              <h4>Son histoire</h4>
+              <p>Les ventouses comptent parmi les plus anciennes pratiques connues&nbsp;: on en trouve la trace dans l’Égypte ancienne et dans la Chine antique, où l’on utilisait des cornes d’animaux, puis des bambous. Posées sur la peau, elles créent une légère aspiration.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Une sensation de relâchement des zones tendues</li>
+                <li>Une technique ancestrale, revisitée</li>
+                <li>Un soin tonique, différent d’un massage classique</li>
+              </ul>
+              <p class="fiche-note">Les ventouses peuvent laisser des marques rondes pendant quelques jours.</p>
+            </div>
           </li>
-          <li>
-            <h3>Massage thérapeutique «&#8239;Skin &amp; Soul&#8239;»</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="skin_soul" aria-haspopup="dialog"><span class="soin-nom">Massage thérapeutique «&#8239;Skin &amp; Soul&#8239;»</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">by Sandy</p>
             <p class="ligne"><span>90&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">110&nbsp;€</span></p>
+            <div class="fiche" id="fiche-skin_soul">
+              <h4>Son histoire</h4>
+              <p>«&#8239;Skin &amp; Soul&#8239;» est le massage signature de Sandy&nbsp;: un soin de l’âme, du corps et de l’esprit. Pendant 90&nbsp;minutes, elle met au service de votre bien-être sa connaissance du corps et son écoute.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Le soin le plus complet de la carte</li>
+                <li>Le corps et l’esprit, ensemble</li>
+                <li>Toute l’expertise de Sandy, en 90&nbsp;minutes</li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <h3>Soin de dépouillement transgénérationnel</h3>
+          <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="transgenerationnel" aria-haspopup="dialog"><span class="soin-nom">Soin de dépouillement transgénérationnel</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne ligne-seule"><span class="prix">50&nbsp;€</span></p>
+            <div class="fiche" id="fiche-transgenerationnel">
+              <h4>Son histoire</h4>
+              <p>Le transgénérationnel part d’une idée&nbsp;: nous héritons aussi de l’histoire de nos ancêtres. En France, la psychologue Anne Ancelin Schützenberger l’a fait connaître avec son livre «&#8239;Aïe, mes aïeux&#8239;!&#8239;» (1993). Sandy s’y est formée après une découverte sur sa propre histoire familiale.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Prendre du recul sur son histoire familiale</li>
+                <li>Se libérer de ce qui ne nous appartient pas</li>
+                <li>Un temps d’écoute bienveillant</li>
+              </ul>
+              <p class="fiche-note">Ce soin ne remplace pas un suivi médical ou psychologique.</p>
+            </div>
           </li>
         </ul>
         <p class="rappel">Sur rendez-vous&nbsp;: appelez Sandy ou Sandra.</p>
+        <p class="avertissement">Nos soins sont des soins de bien-être&nbsp;: ils ne remplacent pas un avis ou un traitement médical.</p>
       </div>
     </section>
+
+    <dialog class="fiche-soin" id="fiche-soin" aria-labelledby="fiche-titre">
+      <div class="fiche-boite">
+        <div class="fiche-ciel">
+          <svg class="constellation" viewBox="0 0 200 120" aria-hidden="true" focusable="false"></svg>
+        </div>
+        <div class="fiche-corps">
+          <h3 id="fiche-titre">Soin</h3>
+          <p class="fiche-detail"></p>
+          <div class="fiche-prix"></div>
+          <div class="fiche-contenu"></div>
+          <div class="fiche-actions">
+            <a class="bouton bouton-plein" href="tel:+33677797272">Appeler Sandy</a>
+            <a class="bouton" href="tel:+33646584847">Appeler Sandra</a>
+          </div>
+        </div>
+        <button class="fiche-fermer" type="button" aria-label="Fermer la fiche">×</button>
+      </div>
+    </dialog>
 
     <section class="section section-alt equipe" id="equipe" aria-labelledby="titre-equipe">
       <div class="conteneur">
         <h2 id="titre-equipe">Sandy &amp; Sandra</h2>
-        <p class="chapo">Sandy a formé Sandra. Elles vous reçoivent pour un massage en solo, en duo ou à quatre mains.</p>
+        <p class="chapo">Sandy et Sandra vous reçoivent pour un massage en solo, en duo ou à quatre mains.</p>
         <picture>
           <source type="image/webp" srcset="img/duo-800.webp 800w, img/duo-1600.webp 1600w" sizes="(min-width: 860px) 40rem, 100vw">
           <img class="bandeau" src="img/duo-800.jpg" srcset="img/duo-800.jpg 800w, img/duo-1600.jpg 1600w" sizes="(min-width: 860px) 40rem, 100vw"
@@ -221,25 +351,28 @@
         <div class="praticiennes">
           <article class="praticienne" id="sandy" aria-labelledby="titre-sandy">
             <picture>
-              <source type="image/webp" srcset="img/detoure-sandy.webp">
-              <img src="img/detoure-sandy.png" width="249" height="310" loading="lazy" alt="Portrait de Sandy">
+              <source type="image/webp" srcset="img/portrait-sandy.webp">
+              <img src="img/portrait-sandy.jpg" width="249" height="356" loading="lazy" alt="Portrait de Sandy">
             </picture>
             <div class="praticienne-texte">
               <h3 id="titre-sandy">Sandy</h3>
-              <p>À 16&nbsp;ans, Sandy a été opérée d’une hernie discale (L5-S1) et a vécu avec un handicap. Ce parcours lui a donné une connaissance intime du corps.</p>
-              <p>Elle a ensuite travaillé dans un laboratoire, où elle a suivi des formations scientifiques très poussées sur le corps humain et l’ensemble de ses systèmes. Elle s’est spécialisée dans le transgénérationnel.</p>
-              <p>C’est elle qui a formé Sandra. Son massage signature&nbsp;: «&#8239;Skin &amp; Soul&#8239;», 90&nbsp;minutes.</p>
+              <ol class="parcours">
+                <li><span class="parcours-quand">À 16&nbsp;ans</span><p>Opérée d’une hernie discale (L5-S1), elle vit avec un handicap. Elle y gagne une connaissance profonde du corps.</p></li>
+                <li><span class="parcours-quand">Au laboratoire</span><p>Elle suit des formations scientifiques très poussées sur le corps humain et l’ensemble de ses systèmes.</p></li>
+                <li><span class="parcours-quand">À 40&nbsp;ans</span><p>Elle apprend que son père n’est pas son père biologique. Cette découverte la pousse à étudier le transgénérationnel, devenu sa spécialité.</p></li>
+                <li><span class="parcours-quand">Aujourd’hui</span><p>Maman de quatre enfants, sapeur-pompier volontaire et coach sportive diplômée d’État. Brisée dans tous ses corps, elle en tire une expertise juste et humble.</p></li>
+              </ol>
+              <p>Son massage signature&nbsp;: «&#8239;Skin &amp; Soul&#8239;», 90&nbsp;minutes.</p>
               <a class="bouton" href="tel:+33677797272">Appeler Sandy</a>
             </div>
           </article>
           <article class="praticienne" id="sandra" aria-labelledby="titre-sandra">
             <picture>
-              <source type="image/webp" srcset="img/detoure-sandra.webp">
-              <img src="img/detoure-sandra.png" width="248" height="310" loading="lazy" alt="Portrait de Sandra">
+              <source type="image/webp" srcset="img/portrait-sandra.webp">
+              <img src="img/portrait-sandra.jpg" width="248" height="356" loading="lazy" alt="Portrait de Sandra">
             </picture>
             <div class="praticienne-texte">
               <h3 id="titre-sandra">Sandra</h3>
-              <p>Sandra a été formée par Sandy. Elle masse en solo, et aux côtés de Sandy pour le Duo Sérénita et le massage à quatre mains.</p>
               <figure class="citation">
                 <blockquote><p>«&#8239;Tu es la personne la plus importante de ta vie.&#8239;»</p></blockquote>
               </figure>
@@ -304,5 +437,6 @@
     <a href="tel:+33677797272">Appeler Sandy</a>
     <a href="tel:+33646584847">Appeler Sandra</a>
   </nav>
+  <script src="js/soins.js?v=1" defer></script>
 </body>
 </html>

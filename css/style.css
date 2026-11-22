@@ -17,6 +17,11 @@
   --or-patine: #e1ba7d;
   --or-vif: #f1d051;
   --bronze: #ac8507;
+  --ivoire: #f6efe6;
+  --or-fonce: #94701f;
+  --or-etoile: #c4952b;
+  --brun: #4d3a26;
+  --brun-doux: #6b5539;
   --filet: rgba(225, 186, 125, 0.28);
   --mesure: 36rem;
   --entete: 4.5rem;
@@ -94,23 +99,22 @@ a:hover { color: var(--or-vif); }
 .bouton-plein:hover { background: var(--or-vif); color: var(--ecorce); }
 .site-entete .bouton { display: none; }
 
-/* ---------- Accueil : Sandy et Sandra montrent le logo Sérénita ---------- */
+/* ---------- Accueil : Sandy et Sandra sur fond ivoire, le logo doré au milieu ---------- */
 
 .accueil {
   position: relative;
   padding: clamp(1.75rem, 4vw, 3.25rem) 1rem 0;
-  background:
-    radial-gradient(ellipse 34% 40% at 50% 30%, rgba(241, 208, 81, 0.14), rgba(241, 208, 81, 0) 72%),
-    radial-gradient(ellipse 85% 70% at 50% 20%, rgba(225, 186, 125, 0.09), rgba(225, 186, 125, 0) 75%),
-    var(--ecorce);
+  background: var(--ivoire);
+  color: var(--ecorce);
+  border-bottom: 1px solid var(--or-patine);
   text-align: center;
 }
 .triptyque {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(0.5rem, 2.5vw, 2.25rem);
-  max-width: 52rem;
+  gap: clamp(0.25rem, 2vw, 1.75rem);
+  max-width: 54rem;
   margin: 0 auto;
 }
 .portrait {
@@ -118,29 +122,28 @@ a:hover { color: var(--or-vif); }
   flex-direction: column;
   align-items: center;
   border-radius: 12px;
-  color: var(--sable);
+  color: var(--ecorce);
   text-decoration: none;
 }
-.portrait .silhouette { display: block; width: 100%; }
-.portrait .silhouette img { width: 100%; height: auto; }
+.portrait img { width: 100%; height: auto; }
 .portrait .prenom-script {
-  margin-top: 0.3rem;
+  margin-top: -0.4rem;
   font-family: "Great Vibes", "Snell Roundhand", cursive;
   font-size: clamp(1.75rem, 3.6vw, 3rem);
   line-height: 1.15;
-  color: var(--or-patine);
+  color: var(--or-fonce);
 }
 .portrait .decouvrir {
   font-size: clamp(0.8rem, 1.3vw, 1rem);
-  color: var(--sable-doux);
+  color: var(--brun-doux);
   text-decoration: underline;
-  text-decoration-color: var(--filet);
+  text-decoration-color: rgba(107, 85, 57, 0.35);
   text-underline-offset: 0.25em;
 }
-.portrait:hover { color: var(--sable); }
-.portrait:hover .silhouette img { filter: brightness(1.06); }
-.portrait:hover .decouvrir { color: var(--or-vif); text-decoration-color: currentColor; }
-.triptyque-logo img { width: 100%; max-width: 17rem; margin: 0 auto; }
+.portrait:hover { color: var(--ecorce); }
+.portrait:hover .decouvrir { color: var(--ecorce); text-decoration-color: currentColor; }
+.triptyque-logo img { width: 100%; max-width: 19rem; margin: 0 auto; }
+.accueil :focus-visible { outline-color: var(--or-fonce); }
 
 .accueil-contenu {
   max-width: 54rem;
@@ -150,10 +153,11 @@ a:hover { color: var(--or-vif); }
 .accueil h1 {
   margin: 0 0 1.25rem;
   font-size: clamp(2.1rem, 3.4vw + 1rem, 3.25rem);
-  color: var(--sable);
+  color: var(--ecorce);
 }
 .accueil .intro {
   max-width: 34rem;
+  color: var(--brun);
   margin: 0 auto 2rem;
   font-size: clamp(1.2rem, 0.6vw + 1.05rem, 1.375rem);
   line-height: 1.6;
@@ -184,18 +188,21 @@ a:hover { color: var(--or-vif); }
 .appels a:hover { background: rgba(225, 186, 125, 0.16); color: var(--sable); }
 .appels .prenom { font-family: "Marcellus", Georgia, serif; font-size: 1.3125rem; color: var(--or-vif); }
 .appels .numero { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
+.accueil .appels a { background: #fffaf2; border-color: var(--or-fonce); color: var(--ecorce); }
+.accueil .appels a:hover { background: #fff3df; color: var(--ecorce); }
+.accueil .appels .prenom { color: var(--or-fonce); }
 
-.accueil .lieu-court { margin: 0; color: var(--sable-doux); }
+.accueil .lieu-court { margin: 0; color: var(--brun-doux); }
 .accueil .avis-google { margin: 0.9rem 0 0; }
-.accueil .avis-google a { color: var(--sable); text-decoration: none; }
+.accueil .avis-google a { color: var(--ecorce); text-decoration: none; }
 .accueil .avis-google .avis-texte {
   text-decoration: underline;
-  text-decoration-color: var(--filet);
+  text-decoration-color: rgba(46, 30, 16, 0.3);
   text-underline-offset: 0.25em;
 }
-.accueil .avis-google a:hover { color: var(--or-vif); }
+.accueil .avis-google a:hover { color: var(--or-fonce); }
 .accueil .avis-google a:hover .avis-texte { text-decoration-color: currentColor; }
-.accueil .avis-google .etoiles { margin-right: 0.35em; color: var(--or-vif); letter-spacing: 0.08em; }
+.accueil .avis-google .etoiles { margin-right: 0.35em; color: var(--or-etoile); letter-spacing: 0.08em; }
 
 /* ---------- Sections ---------- */
 
@@ -297,6 +304,137 @@ a:hover { color: var(--or-vif); }
 }
 .ligne .prix { font-weight: 700; }
 .ligne-seule { justify-content: center; }
+.soins-aide { margin: 0 0 0.75rem; text-align: center; color: var(--sable-doux); font-size: 1rem; }
+.soins-aide span { color: var(--or-vif); }
+.soin-bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding: 0.2rem 0.4rem;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--or-patine);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.soin-bouton:hover, .soin-bouton:focus-visible { color: var(--or-vif); }
+.soin-bouton:hover .soin-plus { background: rgba(241, 208, 81, 0.16); }
+.soin-plus {
+  position: relative;
+  flex: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.soin-plus::before, .soin-plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.5rem;
+  height: 1px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+.soin-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+.fiche { display: none; }
+.sans-dialog .fiche { display: block; margin: 0.75rem auto 0; max-width: 24rem; text-align: left; }
+.sans-dialog .soin-plus { display: none; }
+.carte .avertissement { max-width: 24rem; margin: 0.75rem auto 0; font-size: 0.9rem; text-align: center; color: var(--sable-doux); }
+
+/* Fiche d'un soin : sa constellation s'anime, puis son histoire et ses bienfaits */
+.fiche-soin {
+  width: min(34rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 1px solid var(--or-patine);
+  border-radius: 1.5rem;
+  background: var(--ecorce);
+  color: var(--sable);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.fiche-soin::backdrop { background: rgba(12, 7, 2, 0.72); backdrop-filter: blur(3px); }
+.fiche-boite { position: relative; }
+.fiche-ciel {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 55% 75% at 50% 55%, rgba(241, 208, 81, 0.2), rgba(241, 208, 81, 0) 70%),
+    linear-gradient(180deg, #140b04, #24170b);
+  border-bottom: 1px solid var(--filet);
+}
+.fiche-ciel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(241, 208, 81, 0) 40%, rgba(241, 208, 81, 0.18) 50%, rgba(241, 208, 81, 0) 60%);
+  transform: translateX(-100%);
+}
+.constellation { position: absolute; inset: 0; width: 100%; height: 100%; }
+.constellation .orbite { fill: none; stroke: rgba(225, 186, 125, 0.32); stroke-width: 0.5; stroke-dasharray: 2 4; transform-origin: 100px 60px; }
+.constellation .trait { stroke: var(--or-patine); stroke-width: 0.8; stroke-linecap: round; opacity: 0.85; }
+.constellation .etoile { fill: var(--or-vif); filter: drop-shadow(0 0 2px rgba(241, 208, 81, 0.9)); transform-box: fill-box; transform-origin: center; }
+.fiche-corps { padding: 1.5rem 1.5rem 1.75rem; }
+.fiche-corps > h3 { margin: 0; font-size: 1.6rem; text-align: center; text-wrap: balance; }
+.fiche-detail { margin: 0.25rem 0 0; text-align: center; color: var(--sable-doux); }
+.fiche-prix { margin: 0.75rem 0 0.25rem; }
+.fiche-contenu h4 { margin: 1.25rem 0 0.35rem; font-family: "Marcellus", Georgia, serif; font-weight: 400; font-size: 1.15rem; color: var(--or-patine); }
+.fiche-contenu p { margin: 0; }
+.fiche-bienfaits { margin: 0; padding: 0; list-style: none; }
+.fiche-bienfaits li { position: relative; padding: 0.3rem 0 0.3rem 1.5rem; }
+.fiche-bienfaits li::before { content: "✦"; position: absolute; left: 0; top: 0.3rem; color: var(--or-vif); font-size: 0.85rem; }
+.fiche-note { margin-top: 1rem !important; padding: 0.6rem 0.85rem; border-left: 2px solid var(--or-patine); background: rgba(225, 186, 125, 0.08); font-size: 0.95rem; color: var(--sable-doux); }
+.fiche-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1.5rem; }
+.fiche-fermer {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--filet);
+  border-radius: 50%;
+  background: rgba(20, 12, 4, 0.65);
+  color: var(--sable);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.fiche-fermer:hover { color: var(--or-vif); border-color: var(--or-patine); }
+@media (max-width: 599px) {
+  .fiche-soin {
+    width: 100%;
+    max-width: 100%;
+    margin: auto 0 0;
+    border-radius: 1.25rem 1.25rem 0 0;
+    border-bottom: 0;
+    max-height: 92vh;
+    max-height: 92dvh;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fiche-soin.anime { animation: fiche-apparait 0.35s ease; }
+  .fiche-soin.anime .fiche-ciel::after { animation: fiche-balayage 2.2s ease 0.2s 1 forwards; }
+  .fiche-soin.anime .orbite { animation: fiche-tourne 40s linear infinite; }
+  .fiche-soin.anime .orbite-2 { animation-duration: 26s; animation-direction: reverse; }
+  .fiche-soin.anime .trait { stroke-dasharray: 100; stroke-dashoffset: 100; animation: fiche-trace 1.1s ease forwards; animation-delay: calc(var(--i) * 90ms + 150ms); }
+  .fiche-soin.anime .etoile { animation: fiche-scintille 2.6s ease-in-out infinite; animation-delay: calc(var(--i) * -0.37s); }
+  .fiche-soin.anime .fiche-contenu { animation: fiche-monte 0.6s ease 0.35s both; }
+}
+@keyframes fiche-apparait { from { opacity: 0; transform: translateY(14px) scale(0.98); } }
+@keyframes fiche-balayage { to { transform: translateX(100%); } }
+@keyframes fiche-tourne { to { transform: rotate(360deg); } }
+@keyframes fiche-trace { to { stroke-dashoffset: 0; } }
+@keyframes fiche-scintille { 0%, 100% { opacity: 0.55; transform: scale(0.85); } 50% { opacity: 1; transform: scale(1.2); } }
+@keyframes fiche-monte { from { opacity: 0; transform: translateY(8px); } }
 .carte .rappel {
   max-width: 20rem;
   margin: 1.25rem auto 0;
@@ -323,7 +461,7 @@ a:hover { color: var(--or-vif); }
   gap: 1.25rem;
   align-items: start;
 }
-.praticienne img { width: 100%; }
+.praticienne img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
 .praticienne h3 {
   margin: 0 0 0.4rem;
   font-family: "Great Vibes", "Snell Roundhand", cursive;
@@ -333,6 +471,22 @@ a:hover { color: var(--or-vif); }
 }
 .praticienne .citation { margin: 0 0 1.25rem; }
 .praticienne .citation p { font-size: 1.2rem; }
+.parcours { margin: 0 0 1.25rem; padding: 0; list-style: none; }
+.parcours li { position: relative; margin-left: 0.35rem; padding: 0 0 1.1rem 1.4rem; border-left: 1px solid var(--filet); }
+.parcours li:last-child { padding-bottom: 0.25rem; border-left-color: transparent; }
+.parcours li::before {
+  content: "";
+  position: absolute;
+  left: -0.4rem;
+  top: 0.4rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 50%;
+  background: var(--ecorce-sombre);
+}
+.parcours-quand { display: block; font-family: "Marcellus", Georgia, serif; font-size: 1.1rem; color: var(--or-patine); }
+.parcours p { margin: 0.15rem 0 0; }
 
 /* Lieu */
 .citation-haut { margin-top: 0; }
@@ -439,13 +593,18 @@ body.avec-barre { padding-bottom: 4.75rem; }
   .soins h3 { font-size: 1.3rem; }
 }
 
+@media (max-width: 599px) {
+  .praticienne { grid-template-columns: 1fr; gap: 1rem; }
+  .praticienne picture { max-width: 9rem; }
+}
+
 @media (max-width: 479px) {
   .section { padding: 4rem 1.25rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   a, .bouton, .appels a, .barre-appel a { transition: background-color 0.2s ease, color 0.2s ease; }
-  .portrait .silhouette img { transition: filter 0.2s ease; }
+
 }
 
 .visuellement-cache {
