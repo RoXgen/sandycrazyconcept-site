@@ -461,29 +461,32 @@ a:hover { color: var(--or-vif); }
 .equipe { text-align: center; }
 .equipe .chapo { margin: 0 auto 2rem; }
 .equipe .bandeau { width: 100%; max-width: 40rem; margin: 0 auto; border-radius: 6px; }
-.praticiennes {
+.accompagnantes {
   display: grid;
   gap: 2.5rem;
   max-width: 58rem;
   margin: 3rem auto 0;
   text-align: left;
 }
-.praticienne {
+.accompagnante {
   display: grid;
   grid-template-columns: 7rem minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
 }
-.praticienne img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
-.praticienne h3 {
+.accompagnante img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
+/* Sandy : photo de sa partie retirée (doublon de l'accueil), en attendant une autre photo */
+.accompagnante.sans-photo { grid-template-columns: minmax(0, 1fr); }
+.signatures { margin: 0 0 1.25rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); line-height: 1.6; }
+.accompagnante h3 {
   margin: 0 0 0.4rem;
   font-family: "Great Vibes", "Snell Roundhand", cursive;
   font-size: 2.6rem;
   line-height: 1;
   color: var(--or-patine);
 }
-.praticienne .citation { margin: 0 0 1.25rem; }
-.praticienne .citation p { font-size: 1.2rem; }
+.accompagnante .citation { margin: 0 0 1.25rem; }
+.accompagnante .citation p { font-size: 1.2rem; }
 .parcours { margin: 0 0 1.25rem; padding: 0; list-style: none; }
 .parcours li { position: relative; margin-left: 0.35rem; padding: 0 0 1.1rem 1.4rem; border-left: 1px solid var(--filet); }
 .parcours li:last-child { padding-bottom: 0.25rem; border-left-color: transparent; }
@@ -501,36 +504,67 @@ a:hover { color: var(--or-vif); }
 .parcours-quand { display: block; font-family: "Marcellus", Georgia, serif; font-size: 1.1rem; color: var(--or-patine); }
 .parcours p { margin: 0.15rem 0 0; }
 
-/* Bons cadeaux */
-.bon-visuel { display: grid; place-items: center; padding: 1rem 0; }
-.bon {
+/* Offrir un massage : titre, bon, puis étapes (sur téléphone, dans cet ordre) */
+.offrir-grille { display: grid; row-gap: 1.5rem; }
+.offrir-haut .chapo { margin-bottom: 0; }
+.offrir-bas .etapes { margin-top: 0.5rem; }
+
+/* Bons cadeaux : carte de Sérénita (fond de la carte fournie, textes variables posés par la page) */
+.bon-visuel { display: grid; gap: 1.5rem; justify-items: center; padding: 0.5rem 0; }
+.bon-carte {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: min(100%, 22rem);
-  aspect-ratio: 1.6;
-  padding: 1.25rem;
+  width: 100%;
+  max-width: 36rem;
+  container-type: inline-size;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.75rem rgba(0, 0, 0, 0.45);
+}
+.bon-carte img { width: 100%; height: auto; }
+.bon-ligne, .bon-tel { position: absolute; margin: 0; white-space: nowrap; line-height: 1; }
+.bon-ligne { left: 21%; right: 20.4%; text-align: center; }
+.bon-format {
+  top: 51%;
+  font-family: "Marcellus", Georgia, serif;
+  font-size: 1rem;
+  font-size: calc(3.35cqw * var(--ajuste, 1));
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: #3b2412;
+}
+.bon-style {
+  top: 56.6%;
+  font-family: "Great Vibes", "Snell Roundhand", cursive;
+  font-size: 1.6rem;
+  font-size: calc(5.6cqw * var(--ajuste, 1));
+  color: #ad7e2b;
+}
+.bon-tel {
+  left: 39.6%;
+  top: 91.5%;
+  font-family: "Marcellus", Georgia, serif;
+  font-size: 1rem;
+  font-size: 3.2cqw;
+  letter-spacing: 0.06em;
+  color: #3b2412;
+}
+.bon-choix { display: grid; gap: 0.9rem; width: 100%; max-width: 36rem; }
+.bon-choix[hidden], .bon-choix-style[hidden] { display: none; }
+.bon-choix label { display: block; margin-bottom: 0.35rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); }
+.bon-choix select {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.55rem 2.6rem 0.55rem 0.9rem;
   border: 1px solid var(--or-patine);
-  border-radius: 1rem;
-  background:
-    radial-gradient(ellipse 70% 60% at 30% 20%, rgba(241, 208, 81, 0.16), rgba(241, 208, 81, 0) 70%),
-    linear-gradient(135deg, #3a2716, #1f1309);
-  text-align: center;
-  transform: rotate(-3deg);
+  border-radius: 0.5rem;
+  background: var(--ecorce) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e1ba7d' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 1rem center / 0.8rem;
+  color: var(--sable);
+  font: inherit;
+  font-size: 1rem;
+  -webkit-appearance: none;
+  appearance: none;
 }
-.bon::before {
-  content: "";
-  position: absolute;
-  inset: 0.45rem;
-  border: 1px dashed rgba(225, 186, 125, 0.45);
-  border-radius: 0.7rem;
-}
-.bon img { width: 6.5rem; }
-.bon-titre { margin: 0.1rem 0 0; font-family: "Great Vibes", "Snell Roundhand", cursive; font-size: 2.4rem; line-height: 1.1; color: var(--or-patine); }
-.bon-texte { margin: 0; font-size: 1rem; color: var(--sable-doux); }
-.bon-validite { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--or-patine); }
+.bon-choix select:hover { border-color: var(--or-vif); }
 .etapes { counter-reset: etape; margin: 1.5rem 0 1rem; padding: 0; list-style: none; }
 .etapes li { counter-increment: etape; position: relative; min-height: 2rem; padding: 0.3rem 0 0.6rem 2.75rem; }
 .etapes li::before {
@@ -657,14 +691,21 @@ body.avec-barre { padding-bottom: 4.75rem; }
   .paire { grid-template-columns: 5fr 6fr; gap: 4rem; }
   .paire.inversee .photo { order: 2; }
   .paire.inversee { grid-template-columns: 6fr 5fr; }
-  .praticiennes { grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .praticienne { grid-template-columns: 9rem minmax(0, 1fr); }
+  .accompagnantes { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .accompagnante { grid-template-columns: 9rem minmax(0, 1fr); }
   .barre-appel { display: none; }
   body.avec-barre { padding-bottom: 0; }
 }
 
 @media (min-width: 860px) {
   .paire .publics { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 860px) {
+  .offrir-grille { grid-template-columns: 6fr 5fr; grid-template-rows: auto 1fr; column-gap: 4rem; }
+  .offrir-grille .bon-visuel { grid-column: 1; grid-row: 1 / span 2; align-self: center; }
+  .offrir-haut { grid-column: 2; grid-row: 1; align-self: end; }
+  .offrir-bas { grid-column: 2; grid-row: 2; }
 }
 
 @media (min-width: 1000px) {
@@ -696,8 +737,8 @@ body.avec-barre { padding-bottom: 4.75rem; }
 }
 
 @media (max-width: 599px) {
-  .praticienne { grid-template-columns: 1fr; gap: 1rem; }
-  .praticienne picture { max-width: 9rem; }
+  .accompagnante { grid-template-columns: 1fr; gap: 1rem; }
+  .accompagnante picture { max-width: 9rem; }
 }
 
 @media (max-width: 479px) {

@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,7 +97,7 @@
       </div>
       <div class="accueil-contenu">
         <h1 id="titre-accueil">Massages &amp; soins thérapeutiques à Gruissan</h1>
-        <p class="intro">Fermez les yeux, respirez, laissez les tensions fondre sous des mains expertes qui écoutent, là où les mots ne suffisent plus.</p>
+        <p class="intro">Revenir à soi par le corps, le toucher et la présence, par des mains expertes qui écoutent là où les mots ne suffisent plus.</p>
         <ul class="appels" aria-label="Appeler pour prendre rendez-vous">
           <li><a href="tel:+33677797272"><span class="prenom">Sandy</span><span class="numero">06 77 79 72 72</span></a></li>
           <li><a href="tel:+33646584847"><span class="prenom">Sandra</span><span class="numero">06 46 58 48 47</span></a></li>
@@ -132,7 +132,7 @@
           <picture>
             <source type="image/webp" srcset="img/soin-nuque-600.webp 600w, img/soin-nuque-813.webp 813w" sizes="(min-width: 860px) 28rem, 100vw">
             <img src="img/soin-nuque-600.jpg" srcset="img/soin-nuque-600.jpg 600w, img/soin-nuque-813.jpg 813w" sizes="(min-width: 860px) 28rem, 100vw"
-                 width="600" height="836" loading="lazy" alt="Une praticienne masse la nuque d’un client allongé, les yeux couverts">
+                 width="600" height="836" loading="lazy" alt="Une accompagnante Sérénita masse la nuque d’un client allongé, les yeux couverts">
           </picture>
         </div>
         <div>
@@ -173,6 +173,20 @@
             </div>
           </li>
           <li class="soin">
+            <h3><button class="soin-bouton" type="button" data-fiche="cranien" aria-haspopup="dialog"><span class="soin-nom">Crânien Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
+            <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">30&nbsp;€</span></p>
+            <div class="fiche" id="fiche-cranien">
+              <h4>Son histoire</h4>
+              <p>Le massage de la tête vient d’une tradition familiale indienne, transmise de génération en génération. Il s’est fait connaître en Occident à la fin du XX<sup>e</sup>&nbsp;siècle sous le nom de «&#8239;champissage&#8239;». Les doigts parcourent le cuir chevelu, la nuque et les épaules.</p>
+              <h4>Ses bienfaits</h4>
+              <ul class="fiche-bienfaits">
+                <li>Apaise un esprit trop plein</li>
+                <li>Détend la nuque et les épaules</li>
+                <li>Une pause courte et ressourçante</li>
+              </ul>
+            </div>
+          </li>
+          <li class="soin">
             <h3><button class="soin-bouton" type="button" data-fiche="visage" aria-haspopup="dialog"><span class="soin-nom">Visage Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="detail">à l’huile de rose musquée du Chili</p>
             <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">30&nbsp;€</span></p>
@@ -188,16 +202,16 @@
             </div>
           </li>
           <li class="soin">
-            <h3><button class="soin-bouton" type="button" data-fiche="cranien" aria-haspopup="dialog"><span class="soin-nom">Crânien Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
+            <h3><button class="soin-bouton" type="button" data-fiche="reflexologie" aria-haspopup="dialog"><span class="soin-nom">Réflexologie plantaire et palmaire Sérénita</span><span class="soin-plus" aria-hidden="true"></span></button></h3>
             <p class="ligne"><span>20&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">30&nbsp;€</span></p>
-            <div class="fiche" id="fiche-cranien">
+            <div class="fiche" id="fiche-reflexologie">
               <h4>Son histoire</h4>
-              <p>Le massage de la tête vient d’une tradition familiale indienne, transmise de génération en génération. Il s’est fait connaître en Occident à la fin du XX<sup>e</sup>&nbsp;siècle sous le nom de «&#8239;champissage&#8239;». Les doigts parcourent le cuir chevelu, la nuque et les épaules.</p>
+              <p>Masser les pieds et les mains est une pratique très ancienne. La réflexologie moderne naît en 1913 aux États-Unis&nbsp;: le médecin William Fitzgerald y décrit des «&#8239;zones&#8239;» du corps reliées aux pieds et aux mains. Dans les années 1930, Eunice Ingham dessine les cartes des pieds encore utilisées aujourd’hui. Le soin procède par pressions douces sur les pieds et les mains.</p>
               <h4>Ses bienfaits</h4>
               <ul class="fiche-bienfaits">
-                <li>Apaise un esprit trop plein</li>
-                <li>Détend la nuque et les épaules</li>
-                <li>Une pause courte et ressourçante</li>
+                <li>Une détente profonde, des pieds à la tête</li>
+                <li>Des pieds et des mains plus légers</li>
+                <li>Vingt minutes pour se recentrer</li>
               </ul>
             </div>
           </li>
@@ -251,7 +265,7 @@
             <p class="ligne"><span>45&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">120&nbsp;€</span></p>
             <div class="fiche" id="fiche-quatre_mains">
               <h4>Son histoire</h4>
-              <p>Deux praticiennes, des gestes en miroir&nbsp;: avec quatre mains, le corps ne sait plus quelle main suivre et finit par lâcher prise. Sandy et Sandra accordent leurs mouvements pour n’en faire qu’un.</p>
+              <p>Deux accompagnantes, des gestes en miroir&nbsp;: avec quatre mains, le corps ne sait plus quelle main suivre et finit par lâcher prise. Sandy et Sandra accordent leurs mouvements pour n’en faire qu’un.</p>
               <h4>Ses bienfaits</h4>
               <ul class="fiche-bienfaits">
                 <li>Un lâcher-prise plus rapide</li>
@@ -297,12 +311,12 @@
             <p class="ligne"><span>90&nbsp;min</span><span class="points" aria-hidden="true"></span><span class="prix">110&nbsp;€</span></p>
             <div class="fiche" id="fiche-skin_soul">
               <h4>Son histoire</h4>
-              <p>«&#8239;Skin &amp; Soul&#8239;» est le massage signature de Sandy&nbsp;: un soin de l’âme, du corps et de l’esprit. Pendant 90&nbsp;minutes, elle met au service de votre bien-être sa connaissance du corps et son écoute.</p>
+              <p>«&#8239;Skin &amp; Soul&#8239;», de la peau à l’âme&nbsp;: c’est le massage signature de Sandy, un soin à la fois physique et énergétique, pour le corps, l’âme et l’esprit. Elle y met au service de votre bien-être sa connaissance du corps et son écoute.</p>
               <h4>Ses bienfaits</h4>
               <ul class="fiche-bienfaits">
                 <li>Le soin le plus complet de la carte</li>
                 <li>Le corps et l’esprit, ensemble</li>
-                <li>Toute l’expertise de Sandy, en 90&nbsp;minutes</li>
+                <li>Toute l’expertise de Sandy</li>
               </ul>
             </div>
           </li>
@@ -311,7 +325,7 @@
             <p class="ligne ligne-seule"><span class="prix">50&nbsp;€</span></p>
             <div class="fiche" id="fiche-transgenerationnel">
               <h4>Son histoire</h4>
-              <p>Le transgénérationnel part d’une idée&nbsp;: nous héritons aussi de l’histoire de nos ancêtres. Il permet de libérer les lignées maternelle et paternelle, chez la femme comme chez l’homme&nbsp;: c’est le sens de ce soin de dépouillement et de réalignement. En France, la psychologue Anne Ancelin Schützenberger a fait connaître cette approche avec son livre «&#8239;Aïe, mes aïeux&#8239;!&#8239;» (1993). Sandy s’y est formée après une découverte sur sa propre histoire familiale.</p>
+              <p>Le transgénérationnel part d’une idée&nbsp;: nous héritons aussi de l’histoire de nos ancêtres. Ce soin est le fruit de l’expérience et des propres recherches de Sandy, après les non-dits autour de son père. Il aide à libérer et à réaligner les lignées maternelles et féminines&nbsp;: c’est le sens de ce soin de dépouillement et de réalignement.</p>
               <h4>Ses bienfaits</h4>
               <ul class="fiche-bienfaits">
                 <li>Prendre du recul sur son histoire familiale</li>
@@ -347,22 +361,55 @@
     </dialog>
 
     <section class="section section-alt offrir" id="offrir" aria-labelledby="titre-offrir">
-      <div class="conteneur paire">
-        <div class="bon-visuel" aria-hidden="true">
-          <div class="bon">
-            <img src="img/logo-serenita.png" width="452" height="350" alt="" loading="lazy">
-            <p class="bon-titre">Bon cadeau</p>
-            <p class="bon-texte">Un moment de bien-être à offrir</p>
-            <p class="bon-validite">Valable 1 an</p>
-          </div>
-        </div>
-        <div>
+      <div class="conteneur offrir-grille">
+        <div class="offrir-haut">
           <h2 id="titre-offrir">Offrir un massage</h2>
           <p class="chapo">Un anniversaire, une future maman, un merci&nbsp;: offrez le soin de votre choix avec un bon cadeau Sérénita.</p>
+        </div>
+        <div class="bon-visuel">
+          <div class="bon-carte" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="img/bon-cadeau-768.webp 768w, img/bon-cadeau-1536.webp 1536w" sizes="(min-width: 860px) 36rem, 100vw">
+              <img src="img/bon-cadeau-768.jpg" srcset="img/bon-cadeau-768.jpg 768w, img/bon-cadeau-1536.jpg 1536w" sizes="(min-width: 860px) 36rem, 100vw"
+                   width="1536" height="1024" alt="" loading="lazy" decoding="async">
+            </picture>
+            <p class="bon-ligne bon-format">Massage en duo d’une heure</p>
+            <p class="bon-ligne bon-style">“Massage du monde”</p>
+            <p class="bon-tel">06&nbsp;46&nbsp;58&nbsp;48&nbsp;47</p>
+          </div>
+          <div class="bon-choix" hidden>
+            <div>
+              <label for="bon-soin">Adapter le bon au soin choisi</label>
+              <select id="bon-soin">
+                <option value="huiles-30">Massage aux huiles essentielles chaudes bio — 30 min</option>
+                <option value="huiles-60">Massage aux huiles essentielles chaudes bio — 60 min</option>
+                <option value="cranien">Crânien Sérénita — 20 min</option>
+                <option value="visage">Visage Sérénita — 20 min</option>
+                <option value="reflexologie">Réflexologie plantaire et palmaire Sérénita — 20 min</option>
+                <option value="dos">Massage du dos et cervicales — 40 min</option>
+                <option value="prenatal">Sérénita prénatal et postnatal — 60 min</option>
+                <option value="monde">Massages du monde — 60 min</option>
+                <option value="quatre_mains">Sérénita 4 mains — 45 min</option>
+                <option value="duo" selected>Duo Sérénita — 60 min</option>
+                <option value="ventouses">Ventouses — 45 min</option>
+                <option value="skin_soul">Massage thérapeutique «&#8239;Skin &amp; Soul&#8239;» — 90 min</option>
+                <option value="transgenerationnel">Soin de dépouillement transgénérationnel</option>
+              </select>
+            </div>
+            <div class="bon-choix-style">
+              <label for="bon-style">Style du massage en duo</label>
+              <select id="bon-style">
+                <option value="monde" selected>Massage du monde</option>
+                <option value="huiles">Huiles essentielles chaudes bio</option>
+              </select>
+            </div>
+            <p class="bon-resume visuellement-cache" aria-live="polite">Aperçu du bon&nbsp;: Duo Sérénita — 60 min, Massage du monde.</p>
+          </div>
+        </div>
+        <div class="offrir-bas">
           <ol class="etapes">
             <li>Choisissez le soin à offrir dans <a href="#tarifs">la carte</a>.</li>
             <li>Appelez Sandy ou Sandra pour commander le bon.</li>
-            <li>Réglez au salon, en espèces ou par carte.</li>
           </ol>
           <p>Le bon est valable 1&nbsp;an.</p>
           <div class="actions">
@@ -382,31 +429,27 @@
           <img class="bandeau" src="img/duo-800.jpg" srcset="img/duo-800.jpg 800w, img/duo-1600.jpg 1600w" sizes="(min-width: 860px) 40rem, 100vw"
                width="1600" height="959" loading="lazy" alt="Sandy et Sandra, de dos, en tenue Sérénita, pendant un massage à quatre mains">
         </picture>
-        <div class="praticiennes">
-          <article class="praticienne" id="sandy" aria-labelledby="titre-sandy">
-            <picture>
-              <source type="image/webp" srcset="img/portrait-sandy.webp">
-              <img src="img/portrait-sandy.jpg" width="249" height="356" loading="lazy" alt="Portrait de Sandy">
-            </picture>
-            <div class="praticienne-texte">
+        <div class="accompagnantes">
+          <article class="accompagnante sans-photo" id="sandy" aria-labelledby="titre-sandy">
+            <div class="accompagnante-texte">
               <h3 id="titre-sandy">Sandy</h3>
               <ol class="parcours">
-                <li><span class="parcours-quand">À la naissance</span><p>Elle naît par le siège&nbsp;: déjà, elle ne voulait pas venir au monde.</p></li>
+                <li><span class="parcours-quand">À la naissance</span><p>Elle naît en siège&nbsp;: déjà, elle ne voulait pas venir au monde.</p></li>
                 <li><span class="parcours-quand">À 16&nbsp;ans</span><p>Opérée d’une hernie discale (L5-S1), elle vit avec un handicap. Elle y gagne une connaissance profonde du corps.</p></li>
                 <li><span class="parcours-quand">Au laboratoire</span><p>Salariée du laboratoire (le plus ancien en prescription de phytothérapie et d’aromathérapie), elle suit des formations scientifiques très poussées sur le corps humain et l’ensemble de ses systèmes.</p></li>
                 <li><span class="parcours-quand">À 40&nbsp;ans</span><p>Elle apprend que son père n’est pas son père biologique. Cette découverte la pousse à étudier le transgénérationnel, devenu sa spécialité&nbsp;: il permet de libérer les lignées maternelle et paternelle, chez la femme comme chez l’homme. C’est le sens de son soin de dépouillement et de réalignement.</p></li>
                 <li><span class="parcours-quand">Aujourd’hui</span><p>Maman de quatre enfants, sapeur-pompier volontaire et coach sportive diplômée d’État. Brisée dans tous ses corps, elle en tire une expertise juste et humble.</p></li>
               </ol>
-              <p>Son massage signature&nbsp;: «&#8239;Skin &amp; Soul&#8239;», 90&nbsp;minutes.</p>
+              <p class="signatures">Son massage signature&nbsp;: «&#8239;Skin &amp; Soul&#8239;».<br>Son soin signature&nbsp;: le dépouillement.</p>
               <a class="bouton" href="tel:+33677797272">Appeler Sandy</a>
             </div>
           </article>
-          <article class="praticienne" id="sandra" aria-labelledby="titre-sandra">
+          <article class="accompagnante" id="sandra" aria-labelledby="titre-sandra">
             <picture>
               <source type="image/webp" srcset="img/portrait-sandra.webp">
               <img src="img/portrait-sandra.jpg" width="248" height="356" loading="lazy" alt="Portrait de Sandra">
             </picture>
-            <div class="praticienne-texte">
+            <div class="accompagnante-texte">
               <h3 id="titre-sandra">Sandra</h3>
               <figure class="citation">
                 <blockquote><p>«&#8239;Tu es la personne la plus importante de ta vie.&#8239;»</p></blockquote>
@@ -528,6 +571,7 @@
     <a href="tel:+33677797272">Appeler Sandy</a>
     <a href="tel:+33646584847">Appeler Sandra</a>
   </nav>
-  <script src="js/soins.js?v=1" defer></script>
+  <script src="js/soins.js?v=2" defer></script>
+  <script src="js/bon.js?v=1" defer></script>
 </body>
 </html>
