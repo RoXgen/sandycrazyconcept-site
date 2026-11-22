@@ -4,10 +4,11 @@ Site vitrine (une page) des massages et soins thérapeutiques de Sandy et Sandra
 Le QR code imprimé sur le matériel de Sandy ouvre `https://sandycrazyconcept.fr/` : ce site remplace la page Canva sans changer le QR code.
 
 ## Contenu
-- `index.html` : la page d'accueil (textes et tarifs repris de la page Canva).
-- `mentions-legales.html` : mentions légales (champs « à compléter » avant la mise en ligne).
+- `index.html` : la page d'accueil, version « pro » mise en ligne le 22/11/2026 (en-tête avec logo et menu, photo d'accueil, approche, pour tous, tarifs, équipe, lieu avec adresse et itinéraire, contact, barre d'appel sur téléphone, données structurées).
+- `mentions-legales.html` : mentions légales.
 - `css/style.css` : la mise en page (couleurs de la page Canva : brun #2e1e10, dorés #e1ba7d / #f1d051).
-- `img/` : photos optimisées, sans métadonnées (EXIF).
+- `img/logo-serenita.png` : logo doré sur fond transparent, extrait du bandeau Canva (en attendant le fichier d'origine du logo).
+- `img/` : photos optimisées (JPEG + WebP), sans métadonnées (EXIF).
 - `fonts/` : polices Marcellus et Alegreya Sans (licence SIL Open Font License), hébergées ici : aucun appel externe, aucun cookie.
 
 ## Publication
@@ -28,4 +29,5 @@ GitHub Pages, branche `main`, dossier racine, domaine `sandycrazyconcept.fr` (fi
 - Le ® de « Skin & Soul by Sandy » a été retiré (à remettre seulement si la marque est déposée à l'INPI).
 
 ## Décisions
+- 22/11/2026 (Roméo) : version « pro » mise en ligne ; la prise de rendez-vous en ligne se fera avec Planningen (bouton « Réserver en ligne » vers la page de réservation de Sérénita, quand l'app sera publiée).
 - 22/11/2026 (Roméo) : les liens et le texte renvoient vers le Sunrise Beach Hôtel (https://www.hotelsunrise-gruissan.com), où se trouve la salle de massage de Sandy. Pasha Plage n'est plus mentionné.
