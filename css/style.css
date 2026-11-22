@@ -20,8 +20,9 @@
   --ivoire: #f6efe6;
   --or-fonce: #94701f;
   --or-etoile: #c4952b;
-  --brun: #4d3a26;
-  --brun-doux: #6b5539;
+  --brun: #5c3a1d;
+  --brun-doux: #7a5634;
+  --brun-chaud: #7d4a1f;
   --filet: rgba(225, 186, 125, 0.28);
   --mesure: 36rem;
   --entete: 4.5rem;
@@ -165,7 +166,7 @@ a:hover { color: var(--or-vif); }
 .accueil h1 {
   margin: 0 0 1.25rem;
   font-size: clamp(2.1rem, 3.4vw + 1rem, 3.25rem);
-  color: var(--ecorce);
+  color: var(--brun-chaud);
 }
 .accueil .intro {
   max-width: 34rem;
@@ -200,13 +201,13 @@ a:hover { color: var(--or-vif); }
 .appels a:hover { background: rgba(225, 186, 125, 0.16); color: var(--sable); }
 .appels .prenom { font-family: "Marcellus", Georgia, serif; font-size: 1.3125rem; color: var(--or-vif); }
 .appels .numero { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
-.accueil .appels a { background: #fffaf2; border-color: var(--or-fonce); color: var(--ecorce); }
+.accueil .appels a { background: #fffaf2; border-color: var(--or-fonce); color: var(--brun); }
 .accueil .appels a:hover { background: #fff3df; color: var(--ecorce); }
 .accueil .appels .prenom { color: var(--or-fonce); }
 
 .accueil .lieu-court { margin: 0; color: var(--brun-doux); }
 .accueil .avis-google { margin: 0.9rem 0 0; }
-.accueil .avis-google a { color: var(--ecorce); text-decoration: none; }
+.accueil .avis-google a { color: var(--brun); text-decoration: none; }
 .accueil .avis-google .avis-texte {
   text-decoration: underline;
   text-decoration-color: rgba(46, 30, 16, 0.3);
