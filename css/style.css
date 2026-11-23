@@ -284,7 +284,7 @@ a:hover { color: var(--or-vif); }
 }
 .palme {
   position: absolute;
-  top: 2rem;
+  top: 4.75rem;
   bottom: 2rem;
   width: 2.75rem;
   background: url("../img/palme.png") center top / 100% auto repeat-y;
@@ -320,7 +320,7 @@ a:hover { color: var(--or-vif); }
 }
 .ligne .prix { font-weight: 700; }
 .ligne-seule { justify-content: center; }
-.soins-aide { margin: 0 0 0.75rem; text-align: center; color: var(--sable-doux); font-size: 1rem; }
+.soins-aide { margin: 0 -3.4rem 0.75rem; text-align: center; color: var(--sable-doux); font-size: clamp(0.75rem, 3.3vw, 1rem); text-wrap: balance; }
 .soins-aide span { color: var(--or-vif); }
 .soin-bouton {
   display: inline-flex;
@@ -721,6 +721,7 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (min-width: 700px) {
   .carte { padding: 3.5rem 11rem 2.5rem; }
+  .soins-aide { margin: 0 -1rem 0.75rem; font-size: 1rem; }
   .palme {
     top: 2.5rem;
     bottom: 2.5rem;
@@ -757,3 +758,13 @@ body.avec-barre { padding-bottom: 4.75rem; }
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* Prendre rendez-vous : Instagram et QR code du site */
+.reseaux { margin: 1.25rem 0 0; text-wrap: balance; }
+.reseaux a { color: var(--or-vif); text-decoration: none; }
+.reseaux a:hover, .reseaux a:focus-visible { text-decoration: underline; }
+.reseaux svg { width: 1.3rem; height: 1.3rem; margin-right: 0.45rem; vertical-align: -0.28em; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.reseaux svg .point { fill: currentColor; stroke: none; }
+.qr { margin: 2rem auto 0; max-width: 21rem; text-align: center; }
+.qr img { display: block; width: 100%; max-width: 15rem; height: auto; margin: 0 auto; padding: 0.6rem; background: #fff; border-radius: 1rem; }
+.qr figcaption { margin-top: 0.75rem; font-size: 0.95rem; color: var(--sable-doux); text-wrap: balance; }
