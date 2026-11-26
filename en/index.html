@@ -6,6 +6,7 @@
   <title>Sérénita Gruissan – Massages and therapeutic treatments with Sandy and Sandra</title>
   <meta name="description" content="Massages and therapeutic treatments in Gruissan with Sandy and Sandra, 7 days a week, in their treatment room at the Sunrise Beach Hôtel, Plage des Chalets. Warm organic oil massage, facial, head, back and neck, pregnancy and postnatal, massages of the world, four-hand, duo, cupping, Skin &amp; Soul, transgenerational session. Booking by phone.">
   <meta name="theme-color" content="#2e1e10">
+  <meta name="color-scheme" content="only light">
   <link rel="canonical" href="https://sandycrazyconcept.fr/en/">
   <link rel="alternate" hreflang="fr" href="https://sandycrazyconcept.fr/">
   <link rel="alternate" hreflang="en" href="https://sandycrazyconcept.fr/en/">
@@ -20,7 +21,7 @@
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preload" href="../fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/style.css?v=13">
+  <link rel="stylesheet" href="../css/style.css?v=15">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -375,6 +376,17 @@
           <p class="chapo">A birthday, a mum-to-be, a thank-you: give the treatment of your choice with a Sérénita gift voucher.</p>
         </div>
         <div class="bon-visuel">
+          <fieldset class="bon-occasions" hidden>
+            <legend>Choose the occasion</legend>
+            <div class="pastilles">
+              <label><input type="radio" name="bon-occasion" value="classique" checked><span>Any occasion</span></label>
+              <label><input type="radio" name="bon-occasion" value="noel"><span>Christmas</span></label>
+              <label><input type="radio" name="bon-occasion" value="saint-valentin"><span>Valentine’s Day</span></label>
+              <label><input type="radio" name="bon-occasion" value="anniversaire"><span>Birthday</span></label>
+              <label><input type="radio" name="bon-occasion" value="fete-des-meres"><span>Mother’s Day</span></label>
+              <label><input type="radio" name="bon-occasion" value="fete-des-peres"><span>Father’s Day</span></label>
+            </div>
+          </fieldset>
           <div class="bon-carte" aria-hidden="true">
             <picture>
               <source type="image/webp" srcset="../img/bon-cadeau-768.webp 768w, ../img/bon-cadeau-1536.webp 1536w" sizes="(min-width: 860px) 36rem, 100vw">
@@ -383,6 +395,7 @@
             </picture>
             <p class="bon-ligne bon-format">Massage en duo d’une heure</p>
             <p class="bon-ligne bon-style">“Massage du monde”</p>
+            <p class="bon-message"></p>
           </div>
           <div class="bon-choix" hidden>
             <div>
@@ -410,16 +423,10 @@
                 <option value="huiles">Warm organic essential oils</option>
               </select>
             </div>
-            <div>
-              <label for="bon-occasion">Occasion</label>
-              <select id="bon-occasion">
-                <option value="classique" selected>Any occasion</option>
-                <option value="noel">Christmas</option>
-                <option value="anniversaire">Birthday</option>
-                <option value="saint-valentin">Valentine’s Day</option>
-                <option value="fete-des-meres">Mother’s Day</option>
-                <option value="fete-des-peres">Father’s Day</option>
-              </select>
+            <div class="bon-choix-message">
+              <label for="bon-message">Your message on the voucher <span class="facultatif">(optional)</span></label>
+              <textarea id="bon-message" rows="2" maxlength="120" placeholder="E.g. Merry Christmas Mum, take good care of yourself!"></textarea>
+              <p class="bon-aide">It appears on the preview. Give it when you order: it will be written on your voucher.</p>
             </div>
             <p class="bon-resume visuellement-cache" aria-live="polite">Voucher preview: Sérénita Duo — 60 min, Massages of the world.</p>
           </div>
@@ -451,6 +458,11 @@
           <article class="accompagnante sans-photo" id="sandy" aria-labelledby="titre-sandy">
             <div class="accompagnante-texte">
               <h3 id="titre-sandy">Sandy</h3>
+              <picture class="scene">
+                <source type="image/webp" srcset="../img/sandy-massage-640.webp 640w, ../img/sandy-massage-1059.webp 1059w" sizes="(min-width: 600px) 27rem, 100vw">
+                <img src="../img/sandy-massage-640.jpg" srcset="../img/sandy-massage-640.jpg 640w, ../img/sandy-massage-1059.jpg 1059w" sizes="(min-width: 600px) 27rem, 100vw"
+                     width="640" height="480" loading="lazy" alt="Sandy massaging a client’s back in her massage room">
+              </picture>
               <ol class="parcours">
                 <li><span class="parcours-quand">At birth</span><p>She is born breech: already, she did not want to come into the world.</p></li>
                 <li><span class="parcours-quand">At 16</span><p>After surgery for a herniated disc (L5-S1), she lives with a disability. It gives her a deep knowledge of the body.</p></li>
@@ -592,6 +604,6 @@
     <a href="tel:+33646586847">Call Sandra</a>
   </nav>
   <script src="../js/soins.js?v=2" defer></script>
-  <script src="../js/bon.js?v=2" defer></script>
+  <script src="../js/bon.js?v=3" defer></script>
 </body>
 </html>

@@ -7,8 +7,10 @@
 @font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Alegreya Sans"; src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Great Vibes"; src: url("../fonts/great-vibes-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sacramento"; src: url("../fonts/sacramento-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 
 :root {
+  color-scheme: only light; /* pas de mode sombre forcé (Android) : l'accueil reste ivoire comme sur iPhone */
   --ecorce: #2e1e10;
   --ecorce-sombre: #241608;
   --ecorce-claire: #3a2716;
@@ -482,8 +484,10 @@ a:hover { color: var(--or-vif); }
   align-items: start;
 }
 .accompagnante img { width: 100%; border: 1px solid var(--or-patine); border-radius: 8px; }
-/* Sandy : photo de sa partie retirée (doublon de l'accueil), en attendant une autre photo */
+/* Sandy et Sandra : plus de portrait à côté du texte (doublons de l'accueil) ; Sandy : photo d'elle en train de masser, sous son nom */
 .accompagnante.sans-photo { grid-template-columns: minmax(0, 1fr); }
+.accompagnante .scene { display: block; margin: 0.6rem 0 1.5rem; }
+.accompagnante .scene img { display: block; height: auto; }
 .signatures { margin: 0 0 1.25rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); line-height: 1.6; }
 .accompagnante h3 {
   margin: 0 0 0.4rem;
@@ -547,6 +551,48 @@ a:hover { color: var(--or-vif); }
   color: #ad7e2b;
 }
 .bon-choix { display: grid; gap: 0.9rem; width: 100%; max-width: 36rem; }
+/* Occasions : pastilles au-dessus de la carte */
+.bon-occasions { width: 100%; max-width: 36rem; margin: 0; padding: 0; border: 0; }
+.bon-occasions[hidden] { display: none; }
+.bon-occasions legend { margin: 0 0 0.6rem; padding: 0; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); }
+.pastilles { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pastilles label { position: relative; display: inline-flex; cursor: pointer; }
+.pastilles input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.pastilles span { display: inline-block; padding: 0.45rem 0.95rem; border: 1px solid var(--or-patine); border-radius: 999px; color: var(--sable); font-size: 0.97rem; line-height: 1.3; }
+.pastilles label:hover span { border-color: var(--or-vif); }
+.pastilles input:checked + span { background: var(--or-vif); border-color: var(--or-vif); color: var(--brun); }
+.pastilles input:focus-visible + span { outline: 2px solid var(--or-vif); outline-offset: 2px; }
+/* Message de la personne qui offre : sur la carte, sous la phrase du bas */
+.bon-message {
+  position: absolute;
+  left: 22%;
+  right: 21.4%;
+  top: 85.6%;
+  margin: 0;
+  font-family: "Sacramento", "Great Vibes", cursive;
+  font-size: calc(3.5cqw * var(--ajuste, 1));
+  line-height: 1.08;
+  text-align: center;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  color: #5a3a1e;
+}
+.bon-choix textarea {
+  width: 100%;
+  min-height: 4.5rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--or-patine);
+  border-radius: 0.5rem;
+  background: var(--ecorce);
+  color: var(--sable);
+  font: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+.bon-choix textarea::placeholder { color: var(--sable-doux); opacity: 0.75; }
+.bon-choix textarea:hover { border-color: var(--or-vif); }
+.bon-choix .facultatif { font-family: "Alegreya Sans", sans-serif; font-size: 0.9rem; color: var(--sable-doux); }
+.bon-aide { margin: 0.4rem 0 0; font-size: 0.9rem; color: var(--sable-doux); }
 .bon-choix[hidden], .bon-choix-style[hidden] { display: none; }
 .bon-choix label { display: block; margin-bottom: 0.35rem; font-family: "Marcellus", Georgia, serif; color: var(--or-patine); }
 .bon-choix select {
@@ -737,7 +783,7 @@ body.avec-barre { padding-bottom: 4.75rem; }
 
 @media (max-width: 599px) {
   .accompagnante { grid-template-columns: 1fr; gap: 1rem; }
-  .accompagnante picture { max-width: 9rem; }
+  .accompagnante picture:not(.scene) { max-width: 9rem; }
 }
 
 @media (max-width: 479px) {
